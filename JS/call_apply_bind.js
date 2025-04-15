@@ -17,20 +17,15 @@
 
 
 const person={
-    name:"Akhildas",
-    id:21,
-
+    name:'Akhildas',
+    id:12,
 }
 
 
-function student(...place){
-    console.log(`Hi, I am ${this.name}, I am from ${place}`);
-    
+function students(...place){
+    console.log(`My name is ${this.name} I am from ${place}`)
 }
 
 
-student.call(person,'Palakkad')
-student.apply(person,['Kochi'])
-const dom=student.bind(person,'Thrissur')
+students.call(person,'Palakkad')
 
-dom()
