@@ -25,20 +25,21 @@ let array = [23, { a: 20, b: { c: 52 } }, [[10, 50]], undefined, null, [10, 50, 
 // console.log(sum);
 
 
-function findSum(array){
-    let sum=0;
-
-    let arr=[]
-
-    for(let i=0;i<array.length;i++){
-        if(typeof array[i]==='number'){
-            arr.push(array[i])
-        }else if(typeof Object.values(array[i])==='number' && array[i]!==null){
-            arr.push(array[i])
+let sum=0;
+function findSum(value){
+    if(typeof value==='number'){
+        sum+=value
+    }else if(typeof value==='object' && value!==null){
+        for(let key in value){
+            findSum(value[key])
         }
     }
-
-    sum=arr.reduce((acc,cuc)=>acc+cuc,0)
+    
 }
 
-findSum(array)
+
+for(let i=0;i<array.length;i++){
+    findSum(array[i])
+}
+
+console.log(sum);

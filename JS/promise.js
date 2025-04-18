@@ -1,6 +1,6 @@
 // 1.Promise basic method
 
-const { response } = require("express");
+
 
 
 // const promise= new Promise((resolve,reject)=>{
@@ -65,3 +65,23 @@ const { response } = require("express");
 // })
 
 
+const obj=[{a:[1,23,2,23]},{a:[1,232,32]},{a:[1,232,32]},{a:[1,232,32]}]
+
+
+let sum=0;
+
+function findSum(value){
+    for(let key in value){
+        let arr=value[key]
+
+        for(let i=0;i<arr.length;i++){
+            sum+=arr[i]
+        }
+    }
+}
+
+for(let i=0;i<obj.length;i++){
+    findSum(obj[i])
+}
+
+console.log(sum)
