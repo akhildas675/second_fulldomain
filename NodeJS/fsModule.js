@@ -7,43 +7,39 @@ const fs=require('fs')
 
 //Time and date 
 
-// const date= new Date();
 
+const fileName='text.txt'
+
+// const date=new Date();
 // const format=date.toLocaleString();
 
-// fs.writeFile('dateAndTime.txt',format,(err)=>{
+// fs.writeFile(fileName,format,(err)=>{
 //     if(err) throw err
-//     console.log('The time and date updated')
+//     console.log('Time and Date printed Successfully')
 // })
 
 
 //Write file
-
-// const content='Float like butterfly, string like a bee'
-
-
-// fs.writeFile('text.txt',content,(err)=>{
+// const content='Float like butterfly sting like bee'git
+// fs.writeFile(fileName,content,(err)=>{
 //     if(err) throw err
-//     console.log('File write success')
+//     console.log('File write successfully')
 // })
 
 
 // // File Read
 
 
-// const fileName='text.txt';
-
-
 // fs.readFile(fileName,'utf-8',(err,data)=>{
 //     if(err) throw err
-//     console.log('File write succuss')
-//     console.log('Content: ', data)
+//     console.log('File read successful content: ',data)
 // })
 
 
-const fileName='text.txt';
+
+// // Unlink file
 
 fs.unlink(fileName,(err)=>{
     if(err) throw err
-    console.log('File delete success')
+    console.log('File unlink successfully ')
 })
