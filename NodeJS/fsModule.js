@@ -1,14 +1,13 @@
 //FS module practicals 
 
 const fs=require('fs')
+const fileName='text.txt'
 
 
 
 
 //Time and date 
 
-
-const fileName='text.txt'
 
 // const date=new Date();
 // const format=date.toLocaleString();
@@ -39,7 +38,7 @@ const fileName='text.txt'
 
 // // Unlink file
 
-fs.unlink(fileName,(err)=>{
-    if(err) throw err
-    console.log('File unlink successfully ')
-})
+// fs.unlink(fileName,(err)=>{
+//     if(err) throw err
+//     console.log('File unlink successfully ')
+// })
