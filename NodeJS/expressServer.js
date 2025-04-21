@@ -22,19 +22,51 @@
 
 // })
 
-const express = require('express')
 
 
-const app=express()
-const port=process.env.PORT||5000
-
-app.set('view engine','ejs')
 
 
-app.get('/',(req,res)=>{
-    res.render('index')
-})
-app.listen(port,()=>{
-    console.log(`Server running port: http://localhost:${port}`);
+// Express server without path
+
+// const express = require('express')
+
+
+// const app=express()
+// const port=process.env.PORT||5000
+
+// app.set('view engine','ejs')
+
+
+// app.get('/home',(req,res)=>{
+//     res.render('index')
+// })
+
+
+// app.listen(port,()=>{
+//     console.log(`Server running port: http://localhost:${port}`);
     
-})
+// })
+
+
+
+//Express 
+
+
+// const express=require('express')
+
+// const app=express()
+
+// const port = process.env.PORT || 6000
+
+// app.set('view engine','ejs')
+
+// app.get('/home',(req,res)=>{
+//     res.render('index')
+// })
+
+
+
+// app.listen(port,()=>{
+//     console.log(`server running port: http://localhost:${port}`);
+    
+// })
