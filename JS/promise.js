@@ -65,23 +65,33 @@
 // })
 
 
-const obj=[{a:[1,23,2,23]},{a:[1,232,32]},{a:[1,232,32]},{a:[1,232,32]}]
 
 
-let sum=0;
+// Promise with async await function 
 
-function findSum(value){
-    for(let key in value){
-        let arr=value[key]
 
-        for(let i=0;i<arr.length;i++){
-            sum+=arr[i]
-        }
-    }
+function firstPromise(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve('First Promise Success')
+        }, 3000);
+    })
 }
 
-for(let i=0;i<obj.length;i++){
-    findSum(obj[i])
+
+function secondPromise(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve('Second Promise Success')
+        }, 1000);
+    })
 }
 
-console.log(sum)
+async function display(){
+    const promise1=await firstPromise()
+    console.log(promise1)
+    const promise2=await secondPromise()
+    console.log(promise2)
+}
+
+display()
