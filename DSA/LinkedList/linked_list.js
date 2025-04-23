@@ -29,6 +29,11 @@ class linkedList{
         }
         this.size++
     }
+preppend(){
+
+
+
+}
 
     printList(){
         let curr=this.head;

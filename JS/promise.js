@@ -94,4 +94,4 @@ async function display(){
     console.log(promise2)
 }
 
-display()
+display()  
