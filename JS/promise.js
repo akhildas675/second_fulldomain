@@ -70,28 +70,58 @@
 // Promise with async await function 
 
 
-function firstPromise(){
-    return new Promise((resolve,reject)=>{
-        setTimeout(() => {
-            resolve('First Promise Success')
-        }, 3000);
-    })
-}
+// function firstPromise(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//             resolve('First Promise Success')
+//         }, 3000);
+//     })
+// }
 
 
-function secondPromise(){
-    return new Promise((resolve,reject)=>{
-        setTimeout(() => {
-            resolve('Second Promise Success')
-        }, 1000);
-    })
-}
+// function secondPromise(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//             resolve('Second Promise Success')
+//         }, 1000);
+//     })
+// }
 
-async function display(){
-    const promise1=await firstPromise()
-    console.log(promise1)
-    const promise2=await secondPromise()
-    console.log(promise2)
-}
+// async function display(){
+//     const promise1=await firstPromise()
+//     console.log(promise1)
+//     const promise2=await secondPromise()
+//     console.log(promise2)
+// }
 
-display()  
+// display()  
+
+
+
+
+// Promise Chaining
+
+
+
+ const promise=new Promise((resolve,reject)=>{
+    resolve(1)
+ })
+
+ .then((result)=>{
+    console.log(result)
+    return result+1
+ })
+
+ .then((result)=>{
+    console.log(result);
+    return result+2
+    
+ })
+
+ .then((result)=>{
+    console.log(result)
+  
+ }).catch((err)=>{
+    console.log(err);
+    
+ })
