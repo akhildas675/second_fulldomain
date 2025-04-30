@@ -31,7 +31,9 @@ function namedSelectionSort(str){
                 minIndex=j
             }
         }
-        [str[i],str[minIndex]]=[str[minIndex],str[i]]
+        if(minIndex!==i){
+            [str[i],str[minIndex]]=[str[minIndex],str[i]]
+        }
     }
     return str
 }
