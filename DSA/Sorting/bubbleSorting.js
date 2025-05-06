@@ -21,25 +21,47 @@ let array=[4,51,34,25,2,46,234,23,4,42,456,432,23,43,3,32]
 
 // console.log(bubbleSort(array))
 
-let name='akhildas';
+// let name='akhildas';
 
-function bubbleSortName(string){
+// function bubbleSortName(string){
+//     let swapped;
+//     let str=string.split('')
+//     do {
+//         swapped=false;
+//         for(let i=0;i<str.length-1;i++){
+//             if(str[i]>str[i+1]){
+//                 let temp=str[i];
+//                 str[i]=str[i+1];
+//                 str[i+1]=temp;
+//                 swapped=true
+//             }
+//         }
+//     } while (swapped);
+
+//     return str
+// }
+
+
+// console.log(bubbleSortName(name))
+
+
+
+function bubbleSortInArray(arr){
     let swapped;
-    let str=string.split('')
-    do {
+    do{
         swapped=false;
-        for(let i=0;i<str.length-1;i++){
-            if(str[i]>str[i+1]){
-                let temp=str[i];
-                str[i]=str[i+1];
-                str[i+1]=temp;
+        for(let i=0;i<arr.length-1;i++){
+            if(arr[i]>arr[i+1]){
+                let temp=arr[i];
+                arr[i]=arr[i+1]
+                arr[i+1]=temp;
                 swapped=true
             }
         }
-    } while (swapped);
+    }while(swapped)
 
-    return str
+        return arr
 }
 
 
-console.log(bubbleSortName(name))
+console.log(bubbleSortInArray(array))
