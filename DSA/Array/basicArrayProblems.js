@@ -110,29 +110,25 @@ let array=[6,2,1,7,3,0,41,23,1,2,7,3,34,123,12,36,413,135]
 
 //6.1 Initialize with Array
 
-// function removeDuplicate(arr){
-//     let unique=[]
-//     for(let i=0;i<arr.length;i++){
-//         let isDuplicate=false
-//         for(let j=0;j<unique.length;j++){
-//             if(arr[i]===unique[j]){
-//                isDuplicate=true;
-//                break;
-//             }
-//         }
-//         if(!isDuplicate){
-//             unique[unique.length]=arr[i]
-//         }
-//     }
-//     return unique
-// }
+function findUnique(arr){
+let unique=[]
+for(let i=0;i<arr.length;i++){
+    let isUnique=false;
+    for(let j=0;j<unique.length;j++){
+        if(arr[i]===unique[j]){
+            isUnique=true;
+            break;
+        }
+    }
+    if(!isUnique){
+        unique[unique.length]=arr[i]
+    }
+}
+return unique
 
-// console.log(removeDuplicate(array))
+}
 
-
-
-
-//6.2 Initialize without Array
+console.log(findUnique(array))
 
 //let newArr=[1,4,3,3,2,7,3,3,9]
 
@@ -156,15 +152,20 @@ let array=[6,2,1,7,3,0,41,23,1,2,7,3,34,123,12,36,413,135]
 //6.3 Using splice
 
 
-function removeElementUsingSplice(arr){
-    for(let i=0;i<array.length;i++){
-        for(let j=i+1;j<arr.length;j++){
-            if(arr[i]===arr[j]){
-                arr.splice(j,1)
-                j--
-            }
-        }
-    }
-    return arr
-}
-console.log(removeElementUsingSplice(array))
+// function removeElementUsingSplice(arr){
+//     for(let i=0;i<array.length;i++){
+//         for(let j=i+1;j<arr.length;j++){
+//             if(arr[i]===arr[j]){
+//                 arr.splice(j,1)
+//                 j--
+//             }
+//         }
+//     }
+//     return arr
+// }
+// console.log(removeElementUsingSplice(array))
+
+
+
+
+
