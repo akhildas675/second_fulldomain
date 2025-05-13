@@ -385,7 +385,7 @@ list.insert(2,500)
 
 list.removeEnd()
 list.removeFirst()
-// list.deleteValue(500)
+list.deleteValue(500)
 list.deleteByIndex(1)
 list.reverseList()
 list.printList()
