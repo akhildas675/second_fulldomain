@@ -1,26 +1,22 @@
 
 class Hashtable{
-    constructor(size) {
-        this.size=size;
-        this.table=new Array(size)
+    constructor(size){
+        this.size=size
+        this.table=[...Array(size)].map(()=>[])
     }
 
     hash(key){
-        let hash=0
+        let hash=0;
         for(let i=0;i<key.length;i++){
             hash+=key.charCodeAt(i)
         }
+
         return hash % this.size
     }
 
     set(key,value){
-        let index=this.hash(key)
-        this.table[index]=value;
-    }
-
-    get(key){
         let index=this.hash(key);
-        return this.table[index]
+        this.table[index]=value
     }
 
     display(){
@@ -34,9 +30,8 @@ class Hashtable{
 }
 
 
-let table=new Hashtable(10)
+let table= new Hashtable(10)
 
 table.set('name','Akhildas')
-
 
 table.display()
