@@ -1,21 +1,20 @@
 // 1.Promise basic method
 
+// const promisee = new Promise((resolve,reject)=>{
+//    resolve("Success promise")
+// })
 
-
-
-// const promise= new Promise((resolve,reject)=>{
-//     resolve("Success")
+// .then((response)=>{
+//    console.log(response);
+   
+// })
+// .catch((error)=>{
+//    console.log(error);
+   
 // })
 
 
-
-// promise.then((data)=>{
-//     console.log(data)
-// })
-// .catch((err)=>{
-//     console.log('Error',err);
-    
-// })
+//Using async function
 
 // async function example() {
 //     try {
@@ -30,72 +29,103 @@
 
 // example()
 
+
+
+
+
+
+
 //Promise all method
 
 
-// const promise1 = new Promise((resolve,reject)=>{
-//     setTimeout(() => {
-//         resolve("Promise One Success")
-//     }, 3000);
+// const promise1= new Promise((resolve,reject)=>{
+//    setTimeout(() => {
+//       resolve('Promise 1 success')
+//    }, 1000);
+// })
+// const promise2= new Promise((resolve,reject)=>{
+//    setTimeout(() => {
+//       // resolve('Promise 2 success')
+//       reject('Promise 2 rejected')
+//    }, 2000);
+// })
+// const promise3= new Promise((resolve,reject)=>{
+//    setTimeout(() => {
+//       resolve('Promise 3 success')
+//    }, 3000);
 // })
 
-// const promise2 = new Promise((resolve,reject)=>{
-//     setTimeout(() => {
-//         resolve("Promise Two Success")
-//     }, 2000);
-// })
-
-
-// const promise3=new Promise((resolve,reject)=>{
-//     setTimeout(() => {
-//         resolve("Promise Three Success");
-//         // reject("Promise Three Rejected");
-//     }, 1000);
-// })
-
-
-// const promise=Promise.all([promise1,promise2,promise3])
+// const promise = Promise.any([promise1,promise2,promise3])
 // .then((response)=>{
-//     console.log(response);
-    
+//    console.log(response);
+   
 // })
-// .catch((err)=>{
-//     console.log('Error',err);
-    
+// .catch((error)=>{
+//    console.log(error);
+   
 // })
-
-
 
 
 // Promise with async await function 
 
 
-// function firstPromise(){
-//     return new Promise((resolve,reject)=>{
-//         setTimeout(() => {
-//             resolve('First Promise Success')
-//         }, 3000);
-//     })
+// function promise1(){
+//    return new Promise((resolve,reject)=>{
+//       setTimeout(() => {
+//          resolve('Promise 1 is success')
+//       }, 1000);
+//    })
+// }
+
+// function promise2(){
+//    return new Promise((resolve,reject)=>{
+//       setTimeout(() => {
+//          resolve('Promise 2 is success')
+//       }, 2000);
+//    })
 // }
 
 
-// function secondPromise(){
-//     return new Promise((resolve,reject)=>{
-//         setTimeout(() => {
-//             resolve('Second Promise Success')
-//         }, 1000);
-//     })
+// async function display() {
+//    try {
+//       const user1= await promise1()
+//       console.log(user1)
+//       const user2 = await promise2()
+//       console.log(user2)
+//    } catch (error) {
+//       console.log(error);
+      
+//    }
 // }
 
-// async function display(){
-//     const promise1=await firstPromise()
-//     console.log(promise1)
-//     const promise2=await secondPromise()
-//     console.log(promise2)
-// }
+// display()
 
-// display()  
 
+
+//Promise arithmetic operation
+
+
+function add(a,b){
+   return new Promise((resolve,reject)=>{
+      if(!isNaN(a) &&!isNaN(b)){
+         resolve(a+b)
+      }else{
+         reject('Failed')
+      }
+   })
+}
+
+
+add(10,20)
+
+.then((response)=>{
+   console.log(response);
+   
+})
+.catch((error)=>{
+   console.log(error);
+   
+})
 
 
 
@@ -103,25 +133,27 @@
 
 
 
- const promise=new Promise((resolve,reject)=>{
-    resolve(1)
- })
+const promise=new Promise((resolve,reject)=>{
+   resolve(1)
+})
 
- .then((result)=>{
-    console.log(result)
-    return result+1
- })
 
- .then((result)=>{
-    console.log(result);
-    return result+2
-    
- })
+.then((result)=>{
+   console.log(result);
+   return result+1
+})
 
- .then((result)=>{
-    console.log(result)
-  
- }).catch((err)=>{
-    console.log(err);
-    
- })
+.then((result)=>{
+   console.log(result);
+   return result+2
+})
+
+.then((result)=>{
+   console.log(result);
+   return result+3
+})
+
+.catch((error)=>{
+   console.log(error);
+   
+})

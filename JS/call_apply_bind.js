@@ -1,45 +1,51 @@
+
+//call
+
+// const person = {
+//   name: "Akhildas",
+//   id: 263,
+// };
+
+// function student(...place) {
+//   console.log(`My name is ${this.name} , I am from ${place}`);
+// }
+
+// student.call(person, "Palakkad");
+
+
+
+//apply
+
+
+// const person={
+//     name:'akhildas',
+//     id:23,
+// }
+
+
+// function student(...place){
+//     console.log(`Hai I am ${this.name} , I am from ${place}`);
+    
+// }
+
+
+// student.apply(person,['Palakkad'])
+
+
+//bind
+
+
 // const person={
 //     name:'Akhildas',
-//     id:21,
-// }
-
-// function students(...place){
-// console.log(`Hai, I am ${this.name}, I am from ${place}`);
-
-// }
-
-// students.call(person,'Palakkad')
-// students.apply(person,['Palakkad'])
-// const dom=students.bind(person,'Thrissur')
-
-// dom()
-
-
-
-// const person={
-//     name:'Akhildas',
-//     id:12,
+//     id:876
 // }
 
 
-// function students(...place){
-//     console.log(`My name is ${this.name} I am from ${place}`)
+// function student(...place){
+//     console.log(`My name is ${this.name}, I am from ${place}`);
+    
 // }
 
+// let result=student.bind(person,'Palakkad')
 
-// students.call(person,'Palakkad')
-
-
-
-
-const person={
-    name:'Akhildas',
-    id:12,
-}
-
-
-function students(place){
-    console.log(`I am ${this.name}, I am from ${place}`)
-}
-
-students.call(person,'Palakkad')
+// result()
