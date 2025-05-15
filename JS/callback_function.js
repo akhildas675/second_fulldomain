@@ -1,8 +1,13 @@
 function display(name,callback){
-    console.log('My name is'+' '+name);
+    console.log(`Hai I am ${name}`)
     callback()
 }
-function show(){
-    console.log('This is the callback function');
+
+function greets(){
+    console.log('Have a great day');
+    
 }
-display('akhildas',show)
+
+display('Akhildas',greets)
+
+

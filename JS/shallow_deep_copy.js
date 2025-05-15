@@ -6,43 +6,46 @@
 // const person={
 //     name:'Akhildas',
 //     age:23,
-//     address:{
-//         place:'Kochi',
+//     place:{
+//         city:'Kochi',
 //         state:'Kerala'
 //     }
 // }
 
 // const user = Object.assign({},person)
 
-// user.address.place='Thrissur';
+
+
 // user.name='Akhil'
 
+// user.place.city='Chennai'
+// user.place.state='Tamilnadu'
 
-// console.log('shallow copy ',user)
-// console.log('shallow copy ',person)
+// console.log(person);
+// console.log(user)
 
 
 
 //Deep copy 
 
 
-
 const person={
     name:'Akhildas',
-    age:24,
-    address:{
-        place:'Kochi',
+    age:23,
+    place:{
+        city:'Thrissur',
         state:'Kerala'
     }
 }
 
-
 const user = JSON.parse(JSON.stringify(person))
 
-user.name='Akhil'
 
-user.address.place='Manglore'
-user.address.state="Karnataka"
+user.name='Arun';
 
-console.log('deep copy',user)
-console.log('deep copy',person)
+user.place.city="Manglore"
+
+user.place.state='Karnataka'
+
+console.log(user);
+console.log(person);

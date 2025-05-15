@@ -1,37 +1,32 @@
 //Closure Example
 
 // function sum(){
-//     let num1=10 
-//     let num2=20
-    
-//     function result() {
-//         let sum=num1+num2
-//         console.log(sum)
+//     let a=10
+//     let b=20
+
+//     function add(){
+//         console.log(a+b)
 //     }
-//     return result
+//     return add
 // }
 
-// let display = sum()
 
-// display()
-
+// sum()
 
 // Example 2
 
 
 function counter(){
     let count=0
-
     function increment(){
         count++
-        console.log('increment count',count);
-        
+        console.log('Increment Count',count)
     }
     return increment
 }
 
-let result = counter()
-
+const result=counter()
+result()
 result()
 result()
 result()
