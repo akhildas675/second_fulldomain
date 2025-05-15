@@ -4,6 +4,8 @@ class Hashtable{
         this.table=[...Array(size)].map(()=>[])
     }
 
+
+
     hash(key){
         let hash=0;
         for(let i=0;i<key.length;i++){
@@ -13,11 +15,10 @@ class Hashtable{
         return hash % this.size
     }
 
-
-
     set(key,value){
         let index=this.hash(key);
-        let bucket= this.table[index];
+        let bucket=this.table[index];
+
         for(let i=0;i<bucket.length;i++){
             if(bucket[i][0]==key){
                 bucket[i][1]=value;
@@ -31,14 +32,25 @@ class Hashtable{
         let index=this.hash(key);
         let bucket=this.table[index];
         for(let i=0;i<bucket.length;i++){
-            if(bucket[i][0]===key){
+            if(bucket[i][0]==key){
                 return bucket[i][1]
             }
         }
         return undefined
     }
 
-    
+    remove(key){
+        const index=this.hash(key)
+        const bucket=this.table[index];
+        for(let i=0;i<bucket.length;i++){
+          if(bucket[i][0]==key){
+            bucket.splice(i,1);
+            return
+          }
+        }
+        return undefined
+    }
+
 
     display(){
         for(let i=0;i<this.table.length;i++){
@@ -48,15 +60,12 @@ class Hashtable{
     }
 }
 
-let table=new Hashtable(10)
 
+let table= new Hashtable(10);
 
-table.set("name",'Akhildas')
+table.set("name",'Akhil')
 table.set("mane",'Akhil')
-table.set("city",'PKD')
-table.set("state",'KL')
 
-console.log();
-
+table.remove("mane")
 
 table.display()
