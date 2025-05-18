@@ -27,6 +27,9 @@ function merge(left,right){
 
 console.log('array merge Sort',mergeSort(array))
 
+
+//Using String
+
 let name='akhildas'
 
 function namedMergeSort(str){

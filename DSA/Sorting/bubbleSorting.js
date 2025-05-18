@@ -28,7 +28,7 @@ function bubbleSortName(string){
     let str=string.split('')
     do {
         swapped=false;
-        for(let i=0;i<str.length-1;i++){
+        for(let i=0;i<str.length;i++){
             if(str[i]>str[i+1]){
                 let temp=str[i];
                 str[i]=str[i+1];

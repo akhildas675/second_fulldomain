@@ -18,21 +18,21 @@ function insertionSort(arr){
 console.log('insertion Sort',insertionSort(array));
 
 
-// let name='akhildas'
+let name='akhildas'
 
 
-// function insertionSortName(string){
-//     let str=string.split('')
-//     for(let i=1;i<str.length;i++){
-//         let strToInsert=str[i];
-//         j=i-1;
-//         while (j>=0 && str[j]>strToInsert) {
-//             str[j+1]=str[j]
-//             j=j-1
-//         }
-//         str[j+1]=strToInsert
-//     }
-//     return str
-// }
+function insertionSortName(string){
+    let str=string.split('')
+    for(let i=1;i<str.length;i++){
+        let strToInsert=str[i];
+        j=i-1;
+        while (j>=0 && str[j]>strToInsert) {
+            str[j+1]=str[j]
+            j=j-1
+        }
+        str[j+1]=strToInsert
+    }
+    return str
+}
 
-// console.log(insertionSortName(name));
+console.log(insertionSortName(name));
