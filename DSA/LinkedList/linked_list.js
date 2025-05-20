@@ -352,6 +352,23 @@ class linkedList{
         }
         this.head=temp
     }
+
+    middleElement(){
+        if(this.isEmpty()){
+            console.log('The list is empty')
+        }
+
+        let fast=this.head;
+        let slow=this.head;
+
+        while(fast && fast.next){
+            fast=fast.next.next;
+            slow=slow.next;
+
+        }
+        console.log('The middle element is ',slow.value)
+        return slow.value
+    }
     
     printList(){
         let curr=this.head;
@@ -373,6 +390,8 @@ list.append(1)
 list.append(2)
 list.append(3)
 list.append(4)  
+list.append(5)  
+list.append(6)  
 
 list.prepend(0)
 list.prepend(-1)
@@ -389,3 +408,5 @@ list.deleteValue(500)
 list.deleteByIndex(1)
 list.reverseList()
 list.printList()
+
+list.middleElement()
