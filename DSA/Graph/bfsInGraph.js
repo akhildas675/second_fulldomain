@@ -37,7 +37,7 @@ class Graph{
         while(queue.length){
             let vertex=queue.shift()
             console.log(vertex);
-            visited.add(vertex)
+            
 
             for(let neighbor of this.adjacencyList[vertex]){
                 if(!visited.has(neighbor)){
