@@ -1,72 +1,28 @@
 //Express server with path
 
 
-// const express=require('express')
+const express = require('express');
+const axios = require('axios'); // ✅ use axios
+const app = express();
 
-// const path=require('path')
-
-// const app=express()
-
-// const port=process.env.PORT || 5000
-
-// app.set('view engine','ejs')
-
-// app.set('views',path.join(__dirname,'views'))
-
-// app.get('/',(req,res)=>{
-//     res.render('index')
-// })
-
-// app.listen(port,()=>{
-//     console.log(`http://localhost:${port}`);
-
-// })
+const port = process.env.PORT || 3000;
+const path = require('path');
+app.set('views', path.join(__dirname, '../NodeJS/views')); // Adjust as needed
 
 
+app.set('view engine', 'ejs');
 
+app.get('/home', async (req, res) => {
+    try {
+        const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+        const data = response.data; 
+        res.render('index', { data });
+    } catch (error) {
+        console.log('Fetch data from the API failed:', error.message);
+        res.status(500).send('Internal Server Error');
+    }
+});
 
-
-// Express server without path
-
-// const express = require('express')
-
-
-// const app=express()
-// const port=process.env.PORT||5000
-
-// app.set('view engine','ejs')
-
-
-// app.get('/home',(req,res)=>{
-//     res.render('index')
-// })
-
-
-// app.listen(port,()=>{
-//     console.log(`Server running port: http://localhost:${port}`);
-    
-// })
-
-
-
-//Express 
-
-
-// const express=require('express')
-
-// const app=express()
-
-// const port = process.env.PORT || 6000
-
-// app.set('view engine','ejs')
-
-// app.get('/home',(req,res)=>{
-//     res.render('index')
-// })
-
-
-
-// app.listen(port,()=>{
-//     console.log(`server running port: http://localhost:${port}`);
-    
-// })
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});

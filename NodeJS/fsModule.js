@@ -1,44 +1,59 @@
-//FS module practicals 
-
-const fs=require('fs')
-const fileName='text.txt'
+//FS Module workings
 
 
+//Print Date and time
 
 
-//Time and date 
+const fs = require('fs')
+
+let filename='text.txt'
 
 
-// const date=new Date();
-// const format=date.toLocaleString();
 
-// fs.writeFile(fileName,format,(err)=>{
-//     if(err) throw err
-//     console.log('Time and Date printed Successfully')
+// let date= new Date().toLocaleString()
+
+// fs.writeFile(filename,date,(err)=>{
+//     if(err){
+//         throw new Error('Failed')
+//     }
+//     console.log('File write time and date updated')
 // })
 
 
-//Write file
-// const content='Float like butterfly sting like bee'git
-// fs.writeFile(fileName,content,(err)=>{
-//     if(err) throw err
-//     console.log('File write successfully')
+// Write file
+
+// let content = 'The file write successfully done'
+
+// fs.writeFile(filename,content,(err)=>{
+//     if(err){
+//         throw new Error("failed");
+        
+//     }
+
+//     console.log('File write successfully completed');
+    
 // })
 
 
-// // File Read
+//Read file
 
-
-// fs.readFile(fileName,'utf-8',(err,data)=>{
-//     if(err) throw err
-//     console.log('File read successful content: ',data)
+// fs.readFile(filename,(err,data)=>{
+//     if(err){
+//         throw new Error('The file read failed')
+//     }
+//     console.log('File read successfully',data.toString())
 // })
 
 
 
-// // Unlink file
+//Unlink
 
-// fs.unlink(fileName,(err)=>{
-//     if(err) throw err
-//     console.log('File unlink successfully ')
+// fs.unlink(filename,(err)=>{
+//     if(err){
+//         throw new Error("Failed");
+        
+//     }
+
+//     console.log('File removed from the directory');
+    
 // })
