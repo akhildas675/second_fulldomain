@@ -1,15 +1,10 @@
-import React, { useState } from 'react';
 
 const CounterApp = () => {
-    const [count,setCount]=useState(0)
-
-    const inc=(()=>{
-        setCount(prev=>prev+1)
-    })
+   
+    let rendering=['apple','orange','grape','kiwi']
     return (
         <div>
-            <h1>Count:{count}</h1>
-            <button onClick={inc}>+</button>
+           {rendering.map((fruit)=>{return <h1>{fruit}</h1>})}
         </div>
     );
 }
