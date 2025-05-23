@@ -12,11 +12,7 @@ function App() {
 
   return (
     <>
-     {/* <CounterApp/>
-     <RenderingLIst/>
-     <ConditionalRendering/> */}
-     <Buttons/>
-     <Student name='SpiderMan' age={20} isStudent={false}/>
+    <CounterApp/>
     </>
   )
 }
