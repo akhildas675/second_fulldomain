@@ -1,6 +1,7 @@
 
 
 import './App.css'
+import Student from './Components/props/student'
 import CounterApp from './Components/useState/CounterApp'
 import Buttons from './Components/workings/buttons'
 import ConditionalRendering from './Components/workings/conditionalRendering'
@@ -15,6 +16,7 @@ function App() {
      <RenderingLIst/>
      <ConditionalRendering/> */}
      <Buttons/>
+     <Student name='SpiderMan' age={20} isStudent={false}/>
     </>
   )
 }
