@@ -16,20 +16,33 @@
 // Example 2
 
 
-function counter(){
-    let count=0
-    function increment(){
-        count++
-        console.log('Increment Count',count)
+// function counter(){
+//     let count=0
+//     function increment(){
+//         count++
+//         console.log('Increment Count',count)
+//     }
+//     return increment
+// }
+
+// const result=counter()
+// result()
+// result()
+// result()
+// result()
+// result()
+// result()
+
+// 
+
+
+function Welcome(name){
+    const greetings=function(message){
+        console.log(`${message} ${name}`)
     }
-    return increment
+    return greetings
 }
 
-const result=counter()
-result()
-result()
-result()
-result()
-result()
-result()
+const myFunction = Welcome('Akhil')
 
+myFunction('Hello')

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const CounterApp = () => {
-    const [count,setCount]=useState(0)
+    let [count,setCount]=useState(0);
 
     const increment=(()=>{
         setCount(prev=>prev+1)
@@ -9,6 +9,7 @@ const CounterApp = () => {
 
     const decrement=(()=>{
         setCount(prev=>prev-1)
+
     })
 
     const reset=(()=>{
@@ -16,13 +17,12 @@ const CounterApp = () => {
     })
     return (
         <div>
-            <h1>Counter App</h1>
+            <h1>Count:{count}</h1>
 
-            <h3>Count:{count}</h3>
-
-            <button onClick={()=>increment()}>+</button>
-            <button onClick={()=>reset()}>Reset</button>
-            <button onClick={()=>decrement()}>-</button>
+            <button onClick={increment}>Inc</button>
+            <button onClick={reset}>Reset</button>
+            <button onClick={decrement}>Dec</button>
+            
         </div>
     );
 }
