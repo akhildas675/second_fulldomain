@@ -57,14 +57,45 @@
 //Number left align pattern
 
 
-function NumberLeftAlign(n){
-    for(let i=1;i<=n;i++){
-        let row='';
-        for(let j=1;j<=i;j++){
-            row+= j+' '
-        }
-        console.log(row)
-    }
-}
+// function NumberLeftAlign(n){
+//     for(let i=1;i<=n;i++){
+//         let row='';
+//         for(let j=1;j<=i;j++){
+//             row+= j+' '
+//         }
+//         console.log(row)
+//     }
+// }
 
-NumberLeftAlign(5)
+// NumberLeftAlign(5)
+
+
+
+
+// function leftPattern(n){
+//     for(let i=1;i<=n;i++){
+//         let row='';
+//         for(let j=1;j<=i;j++){
+//             row+='* '
+//         }
+//         console.log(row);
+        
+//     }
+// }
+
+// leftPattern(5)
+
+
+
+// function NumberPattern(n){
+
+//     for(let i=1;i<=n;i++){
+//         let row='';
+//         for(let j=1;j<=i;j++){
+//             row+= j +" "
+//         }
+//         console.log(row)
+//     }
+// }
+
+// NumberPattern(5)

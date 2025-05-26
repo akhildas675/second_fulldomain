@@ -49,3 +49,25 @@
 // let result=student.bind(person,'Palakkad')
 
 // result()
+
+
+
+//Call Apply Bind
+
+// const person = {
+//     name:'Akhildas',
+//     age:'22'
+// }
+
+// function greet(place){
+//     console.log(`I am ${this.name} my age is ${this.age}, I am from ${place}`)
+// }
+
+// const user = greet.call(person,'Palakkad')
+// const userApply = greet.apply(person,['Kochi'])
+// // const userBind = greet.bind(person,'Thrissur')
+
+// // userBind()
+
+// const delayedGreet = greet.bind(person, 'Calicut');
+// setTimeout(delayedGreet, 1000); 

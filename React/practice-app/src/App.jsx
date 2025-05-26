@@ -2,6 +2,8 @@
 
 import './App.css'
 import Student from './Components/props/student'
+import ChangeColor from './Components/useState/ChangeColor'
+
 import CounterApp from './Components/useState/CounterApp'
 import RealTimeInput from './Components/useState/realTimeInput'
 import ToggleView from './Components/useState/toggleView'
@@ -17,6 +19,7 @@ function App() {
     <CounterApp/>
     <RealTimeInput/>
     <ToggleView/>
+   <ChangeColor/>
     </>
   )
 }
