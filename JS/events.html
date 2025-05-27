@@ -7,11 +7,77 @@
 </head>
 <body>
 
-    <!-- Event Delegation -->
+    <!-- Event propagation -->
 
-    <ul>
-        <li>One</li>
-    </ul>
+    <!-- how to the event traverse form the root to child -->
 
+    <div id="parent">
+        <div id="child">
+
+            <button id="child2">child2</button>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Event capturing -->
+
+
+    <div id="outerOne">
+        <div id="outerSecond">
+            
+        </div>
+    </div>
+
+
+    <!-- Event delegation -->
+
+
+    <div>
+        <ul id="lists">
+
+            <li>Item 1 </li>
+            <li>Item 2 </li>
+            <li>Item 3 </li>
+
+        </ul>
+    </div>
+
+
+    <script>
+        const parent=document.getElementById('parent')
+        const child =document.getElementById('child')
+        const child2=document.getElementById('child2')
+
+        parent.addEventListener('click',()=>{
+            console.log('parent triggered');
+            
+        },true)
+
+        child.addEventListener('click',()=>{
+            console.log('child trigged');
+            
+        })
+
+        child2.addEventListener('click',()=>{
+            console.log('child2 trigged');
+            
+        })
+
+
+    </script>
+
+
+    <script>
+        //Event delegation
+
+        document.getElementById('lists').addEventListener('click',(e)=>{
+            if(e.target.tagName=='LI'){
+                console.log('Clicked ',e.target.textContent)
+            }
+        })
+    </script>
 </body>
 </html>
