@@ -99,3 +99,17 @@
 // }
 
 // NumberPattern(5)
+
+let val=[1,2,3,4,5]
+let result=[]
+for(let i=0;i<val.length;i++){
+    let obj={}
+    
+    for(let j=0;j<=i;j++){
+        let key=`a${j+1}`
+        obj[key]=val[j]
+       
+    }
+        result.push(obj)
+}
+console.log(result);
