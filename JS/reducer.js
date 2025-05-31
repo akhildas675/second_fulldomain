@@ -48,20 +48,20 @@ let arr=[7,21,23,3,5,6,1,8,0,1,-1]
 
 
 
-// function findTheSecondLargestOfEvenNumber(arr){
-//    const result=arr.reduce((acc,cuc)=>{
-//     if(cuc>acc.largest){
-//         acc.secondLargest=acc.largest;
-//         acc.largest=cuc
-//     }else if(cuc>acc.secondLargest && acc.largest!==cuc){
-//         acc.secondLargest=cuc
-//     }
-//     return acc
-//    },{largest:-Infinity,secondLargest:-Infinity})
+function findTheSecondLargestOfEvenNumber(arr){
+   const result=arr.reduce((acc,cuc)=>{
+    if(cuc>acc.largest){
+        acc.secondLargest=acc.largest;
+        acc.largest=cuc
+    }else if(cuc>acc.secondLargest && acc.largest!==cuc){
+        acc.secondLargest=cuc
+    }
+    return acc
+   },{largest:-Infinity,secondLargest:-Infinity})
 
-//    return result.secondLargest!== -Infinity?result.secondLargest:null
-// }
-// console.log(findTheSecondLargestOfEvenNumber(arr));
+   return result.secondLargest!== -Infinity?result.secondLargest:null
+}
+console.log(findTheSecondLargestOfEvenNumber(arr));
 
 
 
