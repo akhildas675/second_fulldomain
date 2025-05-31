@@ -19,11 +19,11 @@ console.log(frequency(arr))
 
 //Recursion
 
-function freq(arr,i=0,set={}){
-    if(i>=arr.length) return set
-      let val=arr[i]
-      set[val]=set[val]?set[val]+1:1
-    return freq(arr,i+1,set)
-}
+// function freq(arr,i=0,set={}){
+//     if(i>=arr.length) return set
+//       let val=arr[i]
+//       set[val]=set[val]?set[val]+1:1
+//     return freq(arr,i+1,set)
+// }
 
-console.log(freq(arr))
+// console.log(freq(arr))
