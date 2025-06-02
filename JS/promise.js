@@ -147,27 +147,27 @@
 
 
 
-// const promise = new Promise((resolve,reject)=>{
-//    resolve(10)
-// })
+const promise = new Promise((resolve,reject)=>{
+   resolve(10)
+})
 
-// .then((response)=>{
-//    console.log(response)
-//    return response+10
-// })
-// .then((response)=>{
-//    console.log(response)
-//    return response+20
-// })
-// .then((response)=>{
-//    console.log(response)
-//    return response+30
-// })
+.then((response)=>{
+   console.log(response)
+   return response+10
+})
+.then((response)=>{
+   console.log(response)
+   return response+20
+})
+.then((response)=>{
+   console.log(response)
+   return response+30
+})
 
-// .catch((err)=>{
-//    console.log(err);
+.catch((err)=>{
+   console.log(err);
    
-// })
+})
 
 
 
