@@ -212,9 +212,8 @@
 
 
 
-
 class Node{
-    constructor(value) {
+    constructor(value){
         this.value=value;
         this.next=null;
     }
@@ -225,34 +224,74 @@ class linkedList{
     constructor(){
         this.head=null;
         this.tail=null;
-        this.size=0;
+        this.size=0
     }
 
     isEmpty(){
-        return this.size===0;
+        return this.size==0
     }
 
     append(value){
-       let newNode =  new Node(value)
-
-        if(this.head===null){
+        let newNode = new Node(value)
+        if(this.isEmpty()){
             this.head=this.tail=newNode;
         }else{
             this.tail.next=newNode;
             this.tail=newNode
         }
+
         this.size++
+
+    }
+
+    prepend(value){
+        let newNode = new Node(value);
+        if(this.isEmpty()){
+            this.head=newNode;
+        }else{
+            newNode.next=this.head;
+            this.head=newNode
+        }
+        this.size++
+    }
+
+
+    removeFirst(){
+        if(this.isEmpty()){
+            return `The node is empty`
+        }else{
+            this.head=this.head.next
+        }
+        this.size--
+    }
+
+
+    removeEnd(){
+        if(this.isEmpty()){
+            return `The node is empty`
+        }else{
+            let prev=this.head;
+            while(prev.next && prev.next.next){
+                prev=prev.next
+            }
+            if(prev.next){
+                prev.next=null;
+                this.size--
+            }
+        }
+       
     }
 
     printList(){
         let listValues='';
         let curr=this.head;
         while(curr){
-            listValues+=`${curr.value} -> `;
-            curr=curr.next;
+            listValues+=`${curr.value} -> `
+            curr=curr.next
         }
 
-        console.log(listValues)
+        console.log(listValues);
+        
     }
 }
 
@@ -262,5 +301,9 @@ list.append(1)
 list.append(2)
 list.append(3)
 list.append(4)
+list.prepend(0)
+list.prepend(-1)
+list.prepend(-2)
+list.prepend(-3)
 
 list.printList()
