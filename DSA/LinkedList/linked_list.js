@@ -282,6 +282,47 @@ class linkedList{
        
     }
 
+    insert(value,index){
+        if(index<0 || index>this.size){
+            console.log(`The index is out of the bounds`);
+            
+        }
+        let newNode = new Node(value);
+        
+        if(index==0){
+            newNode.next=this.head;
+            this.head=newNode
+        }else{
+            let prev=this.head;
+            for(let i=0;i<index-1;i++){
+                prev=prev.next
+            }
+            newNode.next=prev.next;
+            prev.next=newNode
+        }
+
+        this.size++
+    }
+
+
+
+
+
+    findMiddle(){
+        let slow =this.head;
+        let fast=this.head;
+        while(fast && fast.next){
+            slow = slow.next;
+            fast=fast.next.next;
+
+        }
+        console.log(slow.value);
+        
+    }
+
+    
+
+
     printList(){
         let listValues='';
         let curr=this.head;
@@ -301,9 +342,10 @@ list.append(1)
 list.append(2)
 list.append(3)
 list.append(4)
-list.prepend(0)
+
 list.prepend(-1)
 list.prepend(-2)
 list.prepend(-3)
-
+list.insert(0,3)
 list.printList()
+list.findMiddle()
