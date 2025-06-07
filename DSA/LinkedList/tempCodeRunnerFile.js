@@ -277,56 +277,6 @@ class LinkedList {
     }
   }
 
-
-  insert(value,index){
-    if(index<0 || index>this.size){
-      return `The Index is out of the bonds`
-    }
-
-    let newNode = new Node(value);
-    if(index==0){
-      newNode.next=this.head;
-      this.head=newNode
-    }else{
-      let prev=this.head;
-      for(let i=0;i<index-1;i++){
-        prev=prev.next;
-      }
-      if(prev.next){
-        newNode.next=prev.next;
-        prev.next=newNode
-      }
-    }
-
-    this.size++
-  }
-
-
-
-  deleteByValue(value){
-    if(this.isEmpty()){
-     return `The list is empty` 
-    }
-
-    if(this.head==value){
-      this.head=this.head.next
-    }else{
-      let prev=this.head;
-      while(prev.next && prev.next.value!==value){
-        prev=prev.next;
-      }
-
-
-    }
-  }
-
-
-
-
-
-
-
-
   printList() {
     let curr = this.head;
     let listValues = "";
@@ -352,6 +302,3 @@ list.prepend(-3);
 list.prepend(-4);
 
 list.printList();
-// list.removeEnd()
-// list.removeFirst()
-// list.printList();
