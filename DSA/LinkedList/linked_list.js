@@ -280,7 +280,8 @@ class LinkedList {
 
   insert(value,index){
     if(index<0 || index>this.size){
-      return `The Index is out of the bonds`
+      console.log(`The Index is out of the bonds`);
+       
     }
 
     let newNode = new Node(value);
@@ -309,11 +310,20 @@ class LinkedList {
     }
 
     if(this.head==value){
-      this.head=this.head.next
+      this.head=this.head.next  
     }else{
       let prev=this.head;
       while(prev.next && prev.next.value!==value){
         prev=prev.next;
+      }
+
+      if(prev.next){
+        prev.next=prev.next.next
+        this.size--
+      }else{
+        console.log('There is no value in the list');
+        
+        
       }
 
 
@@ -347,12 +357,14 @@ list.append(1);
 list.append(2);
 list.append(3);
 list.append(4);
+list.append(5);
 
 list.prepend(-1);
 list.prepend(-2);
 list.prepend(-3);
 list.prepend(-4);
 
+list.deleteByValue(7)
 list.printList();
 // list.removeEnd()
 // list.removeFirst()

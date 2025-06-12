@@ -10,14 +10,14 @@ let filename='text.txt'
 
 
 
-// let date= new Date().toLocaleString()
+let date= new Date().toLocaleString()
 
-// fs.writeFile(filename,date,(err)=>{
-//     if(err){
-//         throw new Error('Failed')
-//     }
-//     console.log('File write time and date updated')
-// })
+fs.writeFile(filename,date,(err)=>{
+    if(err){
+        throw new Error('Failed')
+    }
+    console.log('File write time and date updated')
+})
 
 
 // Write file
