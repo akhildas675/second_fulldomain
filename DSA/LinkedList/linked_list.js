@@ -206,7 +206,8 @@
 // list.removeMiddle()
 // list.printList()
 
-// Linked list final practice
+
+
 
 class Node {
   constructor(value) {
