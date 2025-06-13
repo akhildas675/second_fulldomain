@@ -1,5 +1,5 @@
 const path = require('path')
-const Worker= require('worker_threads')
+const {Worker}= require('worker_threads')
 
 const worker=new Worker(path.resolve(__dirname,'worker.js'))
 
@@ -9,3 +9,5 @@ worker.on('message',(result)=>{
     console.log('The result from worker ',result);
     
 })
+
+console.log('Without blocking main thread')
