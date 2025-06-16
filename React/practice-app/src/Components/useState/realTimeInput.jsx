@@ -1,19 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 
 const RealTimeInput = () => {
+    const [change,setChange]=useState('')
 
-    const [text,setText]=useState('')
-
-    const handleChange=((e)=>{
-        setText(e.target.value)
-    })
+ const handleChange=((e)=>{
+    setChange(e.target.value)
+ })
     return (
         <div>
-
-            <h1>type on the input box</h1>
-
-           <h1>{text}</h1>
-            <input type="text"  onChange={handleChange} />
+            <h1>{change}</h1>
+            <input type="text" value={change} onChange={handleChange} />
         </div>
     );
 }

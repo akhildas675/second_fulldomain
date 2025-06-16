@@ -1,21 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 
 const ToggleView = () => {
     const [isVisible,setVisible]=useState(true)
-
-    const toggleChange=(()=>{
+    
+    const toggleChange=()=>{
         setVisible(!isVisible)
-    })
+    }
     return (
         <div>
 
-            <button onClick={toggleChange}>{!isVisible ? 'show' :'hide' }</button>
+            <button onClick={toggleChange}>{isVisible?'hide':'show'}</button>
 
-            {
-                (isVisible &&(
-                    <p>Hello Akhildas </p>
-                ))
-            }
+            {isVisible && <h1>The content is visible</h1>}
             
         </div>
     );

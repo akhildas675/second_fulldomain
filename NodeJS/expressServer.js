@@ -2,12 +2,12 @@
 
 
 const express = require('express');
-const axios = require('axios'); // ✅ use axios
+const axios = require('axios'); 
 const app = express();
 
 const port = process.env.PORT || 3000;
 const path = require('path');
-app.set('views', path.join(__dirname, '../NodeJS/views')); // Adjust as needed
+app.set('views', path.join(__dirname, '../NodeJS/views')); 
 
 
 app.set('view engine', 'ejs');
