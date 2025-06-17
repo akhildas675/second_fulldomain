@@ -46,5 +46,5 @@ function recursiveBinarySearch(arr,target,left=0,right=arr.length-1){
 }
 
 
-console.log(recursiveBinarySearch(array,22));
+console.log(recursiveBinarySearch(array.sort,22));
 
