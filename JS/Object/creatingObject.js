@@ -34,3 +34,17 @@
 
 
 
+//4.Object create()
+
+
+const proto={
+    greet(){
+        return `My name ${this.name}`
+    }
+}
+
+const person = Object.create(proto)
+
+person.name='Akhildas';
+
+console.log(person.greet())
