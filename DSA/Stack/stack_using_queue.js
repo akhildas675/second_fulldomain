@@ -18,7 +18,7 @@ class StackUsingQueue{
         }
 
         const popped = this.queue1.shift();
-        [this.queue1.queue2]=[this.queue2,this.queue1];
+        [this.queue1,this.queue2]=[this.queue2,this.queue1];
         return popped;
     }
 

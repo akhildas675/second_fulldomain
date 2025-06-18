@@ -1,20 +1,50 @@
 let arr=[6,32,4,3,3,4,4,4,4,8,1,1,14]
 
 
-function frequency(arr){
-    let set={}
+// function frequency(arr){
+//     let set={}
 
-    for(let i=0;i<arr.length;i++){
-        if(set[arr[i]]){
-            set[arr[i]]++
-        }else{
-            set[arr[i]]=1
-        }
+//     for(let i=0;i<arr.length;i++){
+//         if(set[arr[i]]){
+//             set[arr[i]]++
+//         }else{
+//             set[arr[i]]=1
+//         }
+//     }
+//     return set
+// }
+
+// console.log(frequency(arr))
+
+
+
+
+function frequency(arr,i=0,set={}){
+
+    if(i>=arr.length){
+        return set
     }
-    return set
+
+    let val=arr[i]
+
+    set[val]=set[val]?set[val]+1 : 1;
+    return frequency(arr,i+1,set)
+
 }
 
+
+
+
+
 console.log(frequency(arr))
+
+
+
+
+
+
+
+
 
 
 //Recursion
@@ -25,5 +55,5 @@ console.log(frequency(arr))
 //       set[val]=set[val]?set[val]+1:1
 //     return freq(arr,i+1,set)
 // }
-
-// console.log(freq(arr))
+// let array=[1,5,6,6,7,8,9,2,1,1,3]
+// console.log(freq(array))
