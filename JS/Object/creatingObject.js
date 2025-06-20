@@ -37,14 +37,16 @@
 //4.Object create()
 
 
-const proto={
-    greet(){
-        return `My name ${this.name}`
-    }
-}
+// const proto={
+//     greet(){
+//         return `My name ${this.name}`
+//     }
+// }
 
-const person = Object.create(proto)
+// const person = Object.create(proto)
 
-person.name='Akhildas';
+// person.name='Akhildas';
 
-console.log(person.greet())
+// console.log(person.greet())
+
+
