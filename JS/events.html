@@ -44,7 +44,12 @@
 
         </ul>
     </div>
+    
 
+    <div>
+        <input type="checkbox" id="isChecked">
+        <button onclick="toggleCheckBox()">Check</button>
+    </div>
 
     <script>
         const parent=document.getElementById('parent')
@@ -78,6 +83,11 @@
                 console.log('Clicked ',e.target.textContent)
             }
         })
+
+        function toggleCheckBox(){
+           const checkbox = document.getElementById('isChecked');
+           checkbox.checked = !checkbox.checked
+        }
     </script>
 </body>
 </html>
