@@ -74,37 +74,37 @@
 
 //4.Object pattern 
 
-let arr=[1,2,3,4,5]
+// let arr=[11,21,31,41,51]
 
 
 
 // function ObjectPattern(arr){
-//     let res=[]
-    
+// let res=[];
+
 //     for(let i=1;i<=arr.length;i++){
 //         let obj={}
 //         for(let j=1;j<=i;j++){
-//             let key='a'+j
-//         obj[key]=arr[j-1];
+//             let key='a'+j;
+//             obj[key]=arr[j-1]
+//         }
+//         res.push(obj)
 //     }
-//     res.push(obj)
-//   }
-//   return res
-// }
 
+//     return res
+
+// }
 
 // console.log(ObjectPattern(arr))
 
+// function pattern(n){
+//     for(let i=0;i<=n;i++){
+//         let val=''
+//         for(let j=0;j<=i;j++){
+//             val+='* '
+//         }
 
-function pattern(n){
-    for(let i=0;i<=n;i++){
-        let val=''
-        for(let j=0;j<=i;j++){
-            val+='* '
-        }
+//         console.log(val)
+//     }
+// }
 
-        console.log(val)
-    }
-}
-
-console.log(pattern(5))
+// console.log(pattern(5))
