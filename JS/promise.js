@@ -147,27 +147,74 @@
 
 
 
-const promise = new Promise((resolve,reject)=>{
-   resolve(10)
-})
+// const promise = new Promise((resolve,reject)=>{
+//    resolve(10)
+// })
 
-.then((response)=>{
-   console.log(response)
-   return response+10
-})
-.then((response)=>{
-   console.log(response)
-   return response+20
-})
-.then((response)=>{
-   console.log(response)
-   return response+30
-})
+// .then((response)=>{
+//    console.log(response)
+//    return response+10
+// })
+// .then((response)=>{
+//    console.log(response)
+//    return response+20
+// })
+// .then((response)=>{
+//    console.log(response)
+//    return response+30
+// })
 
-.catch((err)=>{
-   console.log(err);
+// .catch((err)=>{
+//    console.log(err);
    
-})
+// })
+
+
+function promise1 (){
+  return new Promise ((resolve,reject)=>{
+    setTimeout(function() {
+      resolve('Promise 1 Success')
+    }, 1000);
+  })
+}
+
+
+function promise2(){
+  return new Promise ((resolve,reject)=>{
+    setTimeout(()=>{
+      resolve('Promise 2 success')
+    },3000)
+  })
+}
+
+
+
+async function display(){
+ try{
+   
+  const user1 = await promise1()
+  console.log(user1)
+  const user2 = await promise2()
+  console.log(user2)
+   
+ }catch (error){
+   console.log(error)
+ }
+  
+}
+
+
+
+
+
+display()
+
+
+
+
+
+
+
 
 
 
