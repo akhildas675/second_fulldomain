@@ -9,7 +9,7 @@ console.log(isEqualTo100(10,10))
 
 
 
-//2.Write a JavaScript program to get the H extension of a filename.
+//2.Write a JavaScript program to get the extension of a filename.
 
 const getFileExtension =(str)=>str.slice(str.lastIndexOf('.'))
 
