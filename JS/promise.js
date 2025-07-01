@@ -1,5 +1,7 @@
 // 1.Promise basic method
 
+import { response } from "express"
+
 
 
 
@@ -170,44 +172,44 @@
 // })
 
 
-function promise1 (){
-  return new Promise ((resolve,reject)=>{
-    setTimeout(function() {
-      resolve('Promise 1 Success')
-    }, 1000);
-  })
-}
+// function promise1 (){
+//   return new Promise ((resolve,reject)=>{
+//     setTimeout(function() {
+//       resolve('Promise 1 Success')
+//     }, 1000);
+//   })
+// }
 
 
-function promise2(){
-  return new Promise ((resolve,reject)=>{
-    setTimeout(()=>{
-      resolve('Promise 2 success')
-    },3000)
-  })
-}
+// function promise2(){
+//   return new Promise ((resolve,reject)=>{
+//     setTimeout(()=>{
+//       resolve('Promise 2 success')
+//     },3000)
+//   })
+// }
 
 
 
-async function display(){
- try{
+// async function display(){
+//  try{
    
-  const user1 = await promise1()
-  console.log(user1)
-  const user2 = await promise2()
-  console.log(user2)
+//   const user1 = await promise1()
+//   console.log(user1)
+//   const user2 = await promise2()
+//   console.log(user2)
    
- }catch (error){
-   console.log(error)
- }
+//  }catch (error){
+//    console.log(error)
+//  }
   
-}
+// }
 
 
 
 
 
-display()
+// display()
 
 
 
@@ -218,3 +220,28 @@ display()
 
 
 
+// const promise = new Promise ((resolve,reject)=>{
+//   resolve(1)
+// })
+
+// .then((response)=>{
+//   console.log(response)
+//   return response+2
+// })
+// .then((response)=>{
+//   console.log(response);
+//   return response+3
+  
+// })
+
+// .then((response)=>{
+//   console.log(response)
+//   return response+4
+// })
+
+// .catch((err)=>{
+//   console.log(err);
+  
+// })
+
+// console.log(isNaN("100"))
