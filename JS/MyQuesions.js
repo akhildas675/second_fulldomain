@@ -94,6 +94,8 @@
 
 // }
 
+
+//pattern
 // console.log(ObjectPattern(arr))
 
 // function pattern(n){
