@@ -1,18 +1,19 @@
-// import TimerSetting from "./Components/PracticeComponent/TimerSetting";
-// import WindowResize from "./Components/useEffect/WindowResize";
+import ProfileContext from "./Components/PracticeComponent/UseContext/ProfileContext";
+import UserDetails from "./Components/PracticeComponent/UseContext/UserDetails";
 
-import ReactMemo from "./Components/reactMemo/ReactMemo";
 
 
 
 const App = () => {
   return (
     <div>
-    
-      {/* <WindowResize/>
-      <TimerSetting/> */}
 
-      <ReactMemo/>
+      <ProfileContext>
+
+      <UserDetails/>
+      </ProfileContext>
+    
+
     </div>
   );
 }
