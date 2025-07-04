@@ -11,13 +11,11 @@ const Timer = () => {
                      clearInterval(interval)
                     return prevTime
                 }
-                return prevTime+1
+                return prevTime
             })
         },1000)
 
-        return ()=>{
-            clearInterval(interval)
-        }
+       return clearInterval(interval)
 
 
     },[])
