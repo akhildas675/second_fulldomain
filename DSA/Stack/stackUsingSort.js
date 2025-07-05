@@ -18,3 +18,4 @@ function stackUsingSort(stack){
 }
 
 console.log(stackUsingSort(arr))
+
