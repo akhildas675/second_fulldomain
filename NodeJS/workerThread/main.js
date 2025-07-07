@@ -1,27 +1,10 @@
-// const path = require('path')
-// const {Worker}= require('worker_threads')
-
-// const worker=new Worker(path.resolve(__dirname,'worker.js'))
-
-// worker.postMessage(5)
-
-// worker.on('message',(result)=>{
-//     console.log('The result from worker ',result);
-    
-// })
-
-// console.log('Without blocking main thread')
-
-const path = require('path')
 const {Worker} = require('worker_threads')
+const path=require('path')
 
+const worker=new Worker(path.resolve(__dirname,'worker.js'))
 
-const worker = new Worker(path.resolve(__dirname,'worker.js'))
+worker.postMessage(5)
 
-worker.postMessage(10)
-
-worker.on('message',(result)=>{
-    console.log('The result from worker',result);
-    
+worker.on('message',(value)=>{
+    console.log('The result from worker',value)
 })
-
