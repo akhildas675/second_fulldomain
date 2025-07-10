@@ -1,14 +1,11 @@
 import React from 'react';
+import Parent from './Parent';
 
-const Child = ({sendData}) => {
-    const handleChildData=()=>{
-        sendData('The data from child')
-    }
+const Child = ({parentData}) => {
     return (
         <div>
-            <h3>Child Component</h3>
-
-            <button onClick={handleChildData}>Send To Parent</button>
+            <h2>The is Child Component</h2>
+            <h3>Parent Data :{parentData}</h3>
         </div>
     );
 }

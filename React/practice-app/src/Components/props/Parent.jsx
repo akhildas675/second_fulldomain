@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Child from './Child';
-import { useState } from 'react';
 
 const Parent = () => {
-
-    const [child,setChild]=useState('')
-    const handleFromChildData=(data)=>{
-        setChild(data)
+    const [data,setData]=useState('')
+    const sendData=()=>{
+        setData('This data from the parent')
     }
     return (
         <div>
-            <h3>This is the parent Component</h3>
-            <p>Child:{child}</p>
-            <Child sendData={handleFromChildData}/>
+
+            <h1>Parent Component</h1>
+            <button onClick={sendData}>SendData</button>        
+            <Child parentData={data}/>    
         </div>
     );
 }
