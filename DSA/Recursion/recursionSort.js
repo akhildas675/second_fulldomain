@@ -8,10 +8,7 @@ function recursiveSort(arr,n=arr.length){
             [arr[i],arr[i+1]]=[arr[i+1],arr[i]]
         }
     }
-
     return recursiveSort(arr,n-1)
-
-    
 }
 
 let arr=[4,6,11,35,2,6,7,1]

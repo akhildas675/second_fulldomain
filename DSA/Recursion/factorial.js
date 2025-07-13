@@ -1,3 +1,20 @@
+// function factorial(n){
+//     if(n==0){
+//         return 1
+//     }
+
+//     return n*factorial(n-1)
+// }
+
+
+// console.log(factorial(5));
+// console.log(factorial(7));
+// console.log(factorial(8));
+
+
+
+
+
 function factorial(n){
     if(n==0){
         return 1
@@ -6,7 +23,4 @@ function factorial(n){
     return n*factorial(n-1)
 }
 
-
-console.log(factorial(5));
-console.log(factorial(7));
-console.log(factorial(8));
+console.log(factorial(5))

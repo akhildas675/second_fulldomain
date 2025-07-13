@@ -63,6 +63,16 @@ class BST{
             console.log(root.value)
         }
     }
+
+    findMax() {
+    if (!this.root) return null;
+
+    let current = this.root;
+    while (current.right !== null) {
+      current = current.right;
+    }
+    return current.value;
+  }
 }
 
 let bst = new BST()
@@ -77,3 +87,5 @@ bst.insert(1)
 
 // bst.inOrder(bst.root)
 bst.postOrder(bst.root)
+
+console.log("Largest element in BST:", bst.findMax())
