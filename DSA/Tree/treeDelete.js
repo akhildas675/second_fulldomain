@@ -69,7 +69,7 @@ class treeDeletion{
             root.left= this.deleteNode(root.left,value)
         }else if(value>root.value){
             root.right= this.deleteNode(root.right,value)
-        }else{
+        }else{ 
 
             
             if(!root.left && !root.right){
@@ -93,7 +93,7 @@ class treeDeletion{
 
     min(node){
         let current=node;
-        while(current==null){
+        while(current.left!==null){
             current=current.left
         }
         return current
@@ -126,6 +126,6 @@ console.log(bst.search(bst.root,10));
 console.log('Min',bst.min(bst.root));
 
 
-console.log('deleted',bst.deleteNode(bst.root,5))
+bst.deleteNode(bst.root,5)
 
 bst.preOrder(bst.root)

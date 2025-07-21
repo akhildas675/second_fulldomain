@@ -1,71 +1,83 @@
-//Min heap
-
-class MinHeap{
+//  Min Heap Implementation
+class MinHeap {
     constructor() {
-        this.heap=[]
+        this.heap = [];
     }
 
-    insert(value){
-        this.heap.push(value)
-        this.bubbleUp()
+    // Insert value into heap
+    insert(value) {
+        this.heap.push(value);
+        console.log(this.heap)
+        this.bubbleUp();
     }
 
-    bubbleUp(){
-        let index=this.heap.length-1;
-        while(index>0){
-            let parentIndex=Math.floor((index-1)/2)
-            if(this.heap[index]>=this.heap[parentIndex]){
+    // Move the last inserted value up to maintain heap property
+    bubbleUp() {
+        let index = this.heap.length - 1;
+        console.log('index ->',index)
+
+        while (index > 0) {
+            let parentIndex = Math.floor((index - 1) / 2);
+
+            if (this.heap[index] >= this.heap[parentIndex]) {
                 break;
             }
 
-            [this.heap[index],this.heap[parentIndex]]=[this.heap[parentIndex],this.heap[index]]
-            index=parentIndex
+            [this.heap[index], this.heap[parentIndex]] = [this.heap[parentIndex], this.heap[index]];
+            index = parentIndex;
         }
     }
 
-    extractMin(){
-        if(this.heap.length==0) return null;
-        if(this.heap.length==1) return this.heap.pop();
-        const min=this.heap[0]
-        this.heap[0]=this.heap.pop()
-        this.heapify(0)
-        return min
+    // Remove and return the minimum value from the heap
+    extractMin() {
+        if (this.heap.length === 0) return null;
+        if (this.heap.length === 1) return this.heap.pop();
+
+        const min = this.heap[0];
+        this.heap[0] = this.heap.pop(); // Move last to root
+        this.heapify(0); // Restore heap
+        return min;
     }
 
-    heapify(i){
-        console.log(i)
-        let left=2*i+1;
-        let right=2*i+2;
-        let smallest=i;
-        if(left<this.heap.length && this.heap[left]<this.heap[smallest]){
-            smallest=left
-        }
-        if(right<this.heap.length && this.heap[right]<this.heap[smallest]){
-            smallest=right
+    // Heapify (percolate down) from index i
+    heapify(i) {
+        let left = 2 * i + 1;
+        let right = 2 * i + 2;
+        let smallest = i;
+
+        if (left < this.heap.length && this.heap[left] < this.heap[smallest]) {
+            smallest = left;
         }
 
-        if(smallest!==i){
-            [this.heap[i],this.heap[smallest]]=[this.heap[smallest],this.heap[i]]
-            this.heapify(smallest)
+        if (right < this.heap.length && this.heap[right] < this.heap[smallest]) {
+            smallest = right;
+        }
 
+        if (smallest !== i) {
+            [this.heap[i], this.heap[smallest]] = [this.heap[smallest], this.heap[i]];
+            this.heapify(smallest);
         }
     }
 
-
+    // Print the heap array
+    printHeap() {
+        console.log("Heap:", this.heap.join(" -> "));
+    }
 }
 
-const minHeap =new MinHeap();
 
-minHeap.insert(4)
-minHeap.insert(10)
-minHeap.insert(8)
-minHeap.insert(5)
-minHeap.insert(1)
+// 🧪 Example usage:
+const minHeap = new MinHeap();
 
-minHeap.heapify(0)
+minHeap.insert(42);
+minHeap.insert(56);
+minHeap.insert(35);
+minHeap.insert(13);
+minHeap.insert(2);
 
-console.log(minHeap.heap);
 
-console.log(minHeap.extractMin())
+minHeap.printHeap(); 
 
-console.log(minHeap.heap)
+console.log("Extracted Min:", minHeap.extractMin());
+
+minHeap.printHeap(); 

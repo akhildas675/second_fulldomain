@@ -54,3 +54,39 @@
 //     console.log(key);
     
 // }
+
+
+
+
+//SetInterval
+
+
+// function* printEven(){
+//     let i=0;
+//     while(true){
+//        if(i%2==0){
+//         yield i
+//        }
+//        i++
+//     }
+// }
+
+// let  gen=printEven()
+
+
+// function limitPrint(max){
+//     let count=0
+//     let timer=setInterval(()=>{
+//         if(count>=max){
+//             clearInterval(timer)
+//             return
+//         }
+//         console.log(gen.next().value)
+//         count++
+//     },1000)
+
+// }
+
+// limitPrint(10)
+
+
