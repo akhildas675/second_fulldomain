@@ -1,8 +1,9 @@
-const products={
-    product:10,
+const product={
+    avlStock:10,
+
 
     get stock(){
-        return this.product
+       return this.avlStock
     },
 
     set stock(value){
@@ -10,14 +11,11 @@ const products={
             console.log('Stock cannot be negative')
             return;
         }
-
-        this.product=value
+        this.avlStock=value
     }
 }
 
+product.stock=5
+product.stock= -1
 
-products.stock=5
-products.stock= -1
-
-
-console.log(products.stock)
+console.log(product.avlStock)
