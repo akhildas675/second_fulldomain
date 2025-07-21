@@ -108,5 +108,4 @@
 //         console.log(val)
 //     }
 // }
-
-// console.log(pattern(5))
+ console.log(pattern(5))
