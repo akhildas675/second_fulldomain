@@ -6,10 +6,10 @@
 // })
 
 
-const {parentPort} = require('worker_threads');
+// const {parentPort} = require('worker_threads');
 
-parentPort.on('message',(value)=>{
-    let result=10*value;
-    parentPort.postMessage(result)
-});
+// parentPort.on('message',(value)=>{
+//     let result=10*value;
+//     parentPort.postMessage(result)
+// });
 
