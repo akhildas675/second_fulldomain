@@ -1,24 +1,11 @@
-
-// import ProductContext from "./Components/useContext/ProductContext";
-// import ProductList from "./Components/useContext/ProductList";
-
-import CustomHooks from "./Components/CustomHook/CustomHooks";
-import ToggleCustom from "./Components/CustomHook/ToggleCustom";
-import LightModeProvider from "./Components/PracticeComponent/UseContext/LightModeContext";
-import LightModeDisplay from "./Components/PracticeComponent/UseContext/LightModeDisplay";
-
-
-
-
-
-
+import PDarkUseState from "./PracticeComponent/PracticeUseState/PDarkUseState";
+import PTodoUseState from "./PracticeComponent/PracticeUseState/PTodoUseState";
 
 
 const App = () => {
   return (
     <div>
-      <CustomHooks/>
-      <ToggleCustom/>
+      <PTodoUseState/>
     </div>
   );
 }
