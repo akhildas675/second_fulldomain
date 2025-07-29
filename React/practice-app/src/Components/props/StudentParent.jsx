@@ -14,7 +14,7 @@ const StudentParent = () => {
 
             <h1>This the Student parent</h1>
                 <h2>Child Message:{data}</h2>
-            <StudentChild sendData={handleData} />
+            <StudentChild sendData={handleData}/>
             
         </div>
     );

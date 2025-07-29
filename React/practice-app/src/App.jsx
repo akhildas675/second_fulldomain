@@ -1,11 +1,16 @@
-import PDarkUseState from "./PracticeComponent/PracticeUseState/PDarkUseState";
-import PTodoUseState from "./PracticeComponent/PracticeUseState/PTodoUseState";
+
+
+import PracticeThemeProvider from "./PracticeComponent/PracticeUseContext/PThemeContext";
+import PViewToggleButton from "./PracticeComponent/PracticeUseContext/PViewToggleButton";
+import Review from "./Review";
+
+
 
 
 const App = () => {
   return (
     <div>
-      <PTodoUseState/>
+    <Review/>
     </div>
   );
 }
