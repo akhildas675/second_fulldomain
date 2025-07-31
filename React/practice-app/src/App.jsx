@@ -1,10 +1,12 @@
+import ChangeTextColor from "./Components/useRef/ChangeTextColor";
+import InputFocus from "./Components/useRef/InputFocus";
 
 
 
 const App = () => {
   return (
     <div>
-    <Review/>
+      <ChangeTextColor/>
     </div>
   );
 }
