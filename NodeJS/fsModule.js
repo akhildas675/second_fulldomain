@@ -1,59 +1,24 @@
-//FS Module workings
-
-
-//Print Date and time
-
-
-const fs = require('fs')
-
-let filename='text.txt'
+//fs module
 
 
 
-let date= new Date().toLocaleString()
+// file write
 
-fs.writeFile(filename,date,(err)=>{
+
+const fs=require('fs')
+
+
+let date=new Date();
+
+let format=date.toLocaleString()
+
+
+fs.writeFile('import.txt',format,(err)=>{
     if(err){
-        throw new Error('Failed')
+        throw new Error('The write file is error')
+    }else{
+        console.log('The file write success')
     }
-    console.log('File write time and date updated')
 })
 
 
-// Write file
-
-// let content = 'The file write successfully done'
-
-// fs.writeFile(filename,content,(err)=>{
-//     if(err){
-//         throw new Error("failed");
-        
-//     }
-
-//     console.log('File write successfully completed');
-    
-// })
-
-
-//Read file
-
-// fs.readFile(filename,(err,data)=>{
-//     if(err){
-//         throw new Error('The file read failed')
-//     }
-//     console.log('File read successfully',data.toString())
-// })
-
-
-
-//Unlink
-
-// fs.unlink(filename,(err)=>{
-//     if(err){
-//         throw new Error("Failed");
-        
-//     }
-
-//     console.log('File removed from the directory');
-    
-// })

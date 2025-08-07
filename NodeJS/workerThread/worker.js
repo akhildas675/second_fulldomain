@@ -1,15 +1,12 @@
 const {parentPort} = require('worker_threads')
 
-parentPort.on('message',(value)=>{
-    let result=value*10
-    parentPort.postMessage(result)
+
+parentPort.on('message',(limit)=>{
+    for(let i=0;i<=limit;i++){
+        if(i%2==0){
+            parentPort.postMessage(i)
+        }
+    }
+
+    parentPort.close()
 })
-
-
-// const {parentPort} = require('worker_threads');
-
-// parentPort.on('message',(value)=>{
-//     let result=10*value;
-//     parentPort.postMessage(result)
-// });
-
