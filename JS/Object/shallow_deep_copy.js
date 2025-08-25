@@ -38,7 +38,11 @@ const person={
     }
 }
 
-const user = JSON.parse(JSON.stringify(person))
+// const user = JSON.parse(JSON.stringify(person))
+
+const user = structuredClone(person)
+
+
 
 
 user.name='Arun';

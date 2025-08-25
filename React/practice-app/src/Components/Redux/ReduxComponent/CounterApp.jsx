@@ -1,20 +1,24 @@
 import React from 'react';
-import {useSelector,useDispatch} from 'react-redux';
-import { increment,decrement,reset } from '../Slice/CounterAppSlice';
+
+import { increment,reset,decrement } from '../Slice/CounterAppSlice';
+import { useDispatch, useSelector } from 'react-redux';
+
 const CounterApp = () => {
-    const dispatch =useDispatch()
-    const count=useSelector(state=>state.CounterApp.count)
+
+    const count = useSelector((state)=>state.counter.value)
+    const dispatch=useDispatch()
+
     return (
         <div>
 
             <h1>Count:{count}</h1>
-            <button onClick={()=>dispatch(increment())}>Increment</button>
-            <button onClick={()=>dispatch(decrement())}>Increment</button>
-            <button onClick={()=>dispatch(reset())}>Increment</button>
+
+            <button onClick={()=>dispatch(increment())}>Inc</button>
+            <button onClick={()=>dispatch(reset())}>Inc</button>
+            <button onClick={()=>dispatch(decrement())}>Inc</button>
             
         </div>
     );
 }
 
 export default CounterApp;
- 

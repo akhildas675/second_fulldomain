@@ -1,4 +1,4 @@
-let nested = [1, [2, [3], [4,[8,9]], 5], 6];
+let nested = [1, [[2, [3], [4,[[8],[9]]], 5]], 6];
 
 
 function flattedArray(arr){

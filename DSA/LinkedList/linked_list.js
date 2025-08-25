@@ -111,7 +111,9 @@ class linkedList {
     if(this.isEmpty()){
       console.log('The list is empty')
     }
-    if(this.head.value==value){
+
+    
+    if(this.head.value==value && this.head.value){
       this.head=this.head.next;
     }else{
       let prev=this.head;
@@ -172,6 +174,9 @@ class linkedList {
   }
 
 
+
+
+
   reverse(){
     let curr=this.head;
     let prev=null;
@@ -197,9 +202,14 @@ class linkedList {
 let list = new linkedList();
 
 list.append(1);
+list.append(1);
+list.append(5);
+list.append(2);
 list.append(2);
 list.append(3);
+list.append(3);
 list.append(4);
+list.append(3);
 
 list.prepend(-1);
 list.prepend(-2);
@@ -219,3 +229,6 @@ console.log(list.search(3));
 // list.removeMiddleElement()
 list.reverse()
 list.printList();
+
+
+

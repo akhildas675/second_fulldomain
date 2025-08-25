@@ -100,55 +100,55 @@
 
 
 
-// const express = require('express');
-// const app = express();
-
-// // Middleware to block all POST requests
-// app.use((req, res, next) => {
-//   if (req.method === 'POST') {
-//     return res.status(405).send('POST requests are not allowed');
-//   }
-//   next();
-// });
-
-// // Example GET route
-// app.get('/', (req, res) => {
-//   res.send('Welcome! Only non-POST methods are allowed.');
-// });
-
-// app.listen(3000, () => {
-//   console.log('Server running on http://localhost:3000');
-// });
-
-
-
 const express = require('express');
 const app = express();
 
-// Middleware to block POST requests from a specific domain
-app.use((req, res, next) => {
-  const blockedDomain = 'http://baddomain.com';
-
-  if (req.method === 'POST' && req.headers.origin === blockedDomain) {
-    return res.status(403).json({
-      success: false,
-      message: 'POST requests from this domain are not allowed.',
-      origin: req.headers.origin,
-    });
+// Middleware to block all POST requests
+app.use((res, req, next) => {
+  if (req.method === 'POST') {
+    return res.status(405).send('POST requests are not allowed');
   }
-
   next();
 });
 
-// Example GET and POST route
-app.get('/', (req, res) => {
-  res.send('GET request allowed.');
-});
-
-app.post('/', (req, res) => {
-  res.send('POST request accepted from allowed domains.');
+// Example GET route
+app.get('/', (res, req) => {
+  res.send('Welcome! Only non-POST methods are allowed.');
 });
 
 app.listen(3000, () => {
   console.log('Server running on http://localhost:3000');
 });
+
+
+
+// const express = require('express');
+// const app = express();
+
+// // Middleware to block POST requests from a specific domain
+// app.use((req, res, next) => {
+//   const blockedDomain = 'http://baddomain.com';
+
+//   if (req.method === 'POST' && req.headers.origin === blockedDomain) {
+//     return res.status(403).json({
+//       success: false,
+//       message: 'POST requests from this domain are not allowed.',
+//       origin: req.headers.origin,
+//     });
+//   }
+
+//   next();
+// });
+
+// // Example GET and POST route
+// app.get('/', (req, res) => {
+//   res.send('GET request allowed.');
+// });
+
+// app.post('/', (req, res) => {
+//   res.send('POST request accepted from allowed domains.');
+// });
+
+// app.listen(3000, () => {
+//   console.log('Server running on http://localhost:3000');
+// });
