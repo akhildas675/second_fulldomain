@@ -1,9 +1,9 @@
 
+import DarkModeP from "./Components/PracticeComponent/ReduxPractice/DarkModeP";
+import UsersListCustom from "./PracticeComponent/PracticeCustomHook/UsersListCustom";
 
-import CustomFetchUsers from "./Components/CustomHook/CustomFetchUsers";
-import LazyLoading from "./Components/LazyLoading/LazyLoading";
-import UseEffectFetch from "./PracticeComponent/PracticeUseEffect/UseEffectFetch";
-import PracticeUseRefColor from "./PracticeComponent/PracticeUseRef/PracticeUseRefColor";
+
+
 
 
 
@@ -14,7 +14,9 @@ import PracticeUseRefColor from "./PracticeComponent/PracticeUseRef/PracticeUseR
 const App = () => {
   return (
     <div>
-    <CustomFetchUsers/>
+      
+      <UsersListCustom/>
+      <DarkModeP/>
     </div>
   );
 }

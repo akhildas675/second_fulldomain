@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx';
 
 import {Provider} from 'react-redux'
-import { store } from './Components/Redux/Store/UsersStore.jsx';
+import { store } from './Components/PracticeComponent/ReduxPractice/Store/DarkModeStoreP.jsx'
 
 
 
