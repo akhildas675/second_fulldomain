@@ -1,12 +1,14 @@
-const {fork} =require('child_process')
-const path = require('path')
+//Child process parent
+
+
+const {fork} = require('child_process');
+const path = require('path');
 
 const child=fork(path.resolve(__dirname,'forkChild.js'))
 
 child.on('message',(msg)=>{
-    console.log('Message from child',msg)
+    console.log('message from Child',msg)
 })
 
-child.send('Hello from Parent!')
 
-
+child.send('The data from parent')

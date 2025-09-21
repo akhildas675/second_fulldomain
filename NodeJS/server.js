@@ -100,25 +100,25 @@
 
 
 
-const express = require('express');
-const app = express();
+// const express = require('express');
+// const app = express();
 
-// Middleware to block all POST requests
-app.use((res, req, next) => {
-  if (req.method === 'POST') {
-    return res.status(405).send('POST requests are not allowed');
-  }
-  next();
-});
+// // Middleware to block all POST requests
+// app.use((res, req, next) => {
+//   if (req.method === 'POST') {
+//     return res.status(405).send('POST requests are not allowed');
+//   }
+//   next();
+// });
 
-// Example GET route
-app.get('/', (res, req) => {
-  res.send('Welcome! Only non-POST methods are allowed.');
-});
+// // Example GET route
+// app.get('/', (res, req) => {
+//   res.send('Welcome! Only non-POST methods are allowed.');
+// });
 
-app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
-});
+// app.listen(3000, () => {
+//   console.log('Server running on http://localhost:3000');
+// });
 
 
 
@@ -152,3 +152,32 @@ app.listen(3000, () => {
 // app.listen(3000, () => {
 //   console.log('Server running on http://localhost:3000');
 // });
+
+
+
+const express = require('express');
+
+const app = express()
+
+const port=process.env.PORT||3000
+
+function blockPostRequest(req,res,next){
+    if(req.method==='POST'){
+      return res.send('Post request blocking ')
+    }
+    next()
+}
+
+app.use(blockPostRequest)
+
+
+app.get('/home',(req,res)=>{
+  res.send('Welcome Home')
+})
+app.post('/login',(req,res)=>{
+  res.send('This request never send')
+})
+
+app.listen(port,()=>{
+  console.log(`server running port http://localhost:${port}`)
+})

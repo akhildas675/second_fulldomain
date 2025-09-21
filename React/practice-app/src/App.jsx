@@ -1,23 +1,16 @@
 
-import DarkModeP from "./Components/PracticeComponent/ReduxPractice/DarkModeP";
-import UsersListCustom from "./PracticeComponent/PracticeCustomHook/UsersListCustom";
-
-
-
-
-
-
-
-
-
+import ButtonToggle from "./Components/useContext/ButtonToggle";
+import ContextTheme from "./Components/useContext/ContextTheme";
+import DisplayTheme from "./Components/useContext/DisplayTheme";
 
 const App = () => {
   return (
-    <div>
-      
-      <UsersListCustom/>
-      <DarkModeP/>
-    </div>
+  
+      <ContextTheme>
+        <ButtonToggle/>
+        <DisplayTheme/>
+      </ContextTheme>
+   
   );
 }
 

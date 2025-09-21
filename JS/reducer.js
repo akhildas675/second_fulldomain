@@ -40,11 +40,11 @@ let arr=[7,21,23,3,5,6,1,8,0,1,-1]
 //find the largest even number in array
 
 
-// function findTheLargesEvenNumber(arr){
-//     return arr.reduce((acc,cuc,lar)=>cuc%2===0 && cuc>acc? cuc:acc,0)
-// }
+function findTheLargesEvenNumber(arr){
+    return arr.reduce((acc,cuc)=>cuc%2===0 && cuc>acc? cuc:acc,0)
+}
 
-// console.log(findTheLargesEvenNumber(arr));
+console.log(findTheLargesEvenNumber(arr));
 
 
 

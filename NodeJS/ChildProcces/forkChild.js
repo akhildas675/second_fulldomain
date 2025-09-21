@@ -1,4 +1,5 @@
-process.on('message',(data)=>{
-    console.log('The data from parent',data)
-    process.send('The message from child')
+process.on('message',(msg)=>{
+    console.log('the data from parent',msg)
 })
+
+process.send("The message from Child")
