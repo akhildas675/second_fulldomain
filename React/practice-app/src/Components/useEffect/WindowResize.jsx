@@ -11,7 +11,7 @@ const WindowResize = () => {
 
         window.addEventListener('resize',handleWidth)
 
-        return ()=> window.addEventListener('resize',handleWidth)
+        return ()=> window.removeEventListener('resize',handleWidth)
 
 
     },[])

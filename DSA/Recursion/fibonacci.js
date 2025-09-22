@@ -59,12 +59,42 @@
 
 
 
-function fibonacci(n) {
-    if (n <= 1) return n;
-    return fibonacci(n - 1) + fibonacci(n - 2); l
+// function fibonacci(n) {
+//     if (n <= 1) return n;
+//     return fibonacci(n - 1) + fibonacci(n - 2); l
+// }
+
+
+// for (let i = 0; i < 10; i++) {
+//     console.log(fibonacci(i));
+// }
+
+
+
+// function fibonacci(a,b){
+//         if(a>=10){
+//             return ;
+//         }
+
+//         console.log(a)
+
+//         return fibonacci(b,a+b)
+// }
+
+// fibonacci(0,1)
+
+
+
+function fib(n){
+    if(n==0) return 0;
+    if(n==1) return 1
+
+    return fib(n-1)+fib(n-2)
+
+
 }
 
 
-for (let i = 0; i < 10; i++) {
-    console.log(fibonacci(i));
+for(let i=0;i<=10;i++){
+    console.log(fib(i))
 }

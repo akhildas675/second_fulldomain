@@ -99,3 +99,19 @@ let array = [23, { a: 20, b: { c: 52 } }, [[10, 50]], undefined, null, [10, 50, 
 // console.log(sum)
 
 
+
+
+
+let obj={a:1,b:3,c:4,d:4,f:4,f:'3'}
+
+let seen={}
+for(let key in obj){
+    let num=obj[key]
+    if(!seen[num]){
+        seen[num]=1
+    }else{
+        seen[num]++
+    }
+}
+
+console.log(seen)
