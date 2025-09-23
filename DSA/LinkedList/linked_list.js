@@ -172,6 +172,41 @@ class linkedList {
     this.size--
 
   }
+findLastFive() {
+    if (!this.head) return;
+
+    let first = this.head;
+    let second = this.head;
+
+    // Move `first` pointer 5 steps ahead
+    for (let i = 0; i < 5; i++) {
+        if (first.next) {
+            first = first.next;
+        } else {
+            // If list has less than 5 nodes
+            break;
+        }
+    }
+
+    // Move both pointers until `first` reaches the end
+    while (first.next) {
+    console.log('first.value',first.value)
+    console.log('second.value',second.value)
+    
+        first = first.next;
+        second = second.next;
+    }
+
+    // Now `second` points to the node where last 5 start
+    let result = "";
+    while (second) {
+        result += `${second.value}->`;
+        second = second.next;
+    }
+
+    console.log(result);
+}
+
 
 
 
@@ -205,11 +240,11 @@ list.append(1);
 list.append(1);
 list.append(5);
 list.append(2);
-list.append(2);
-list.append(3);
-list.append(3);
-list.append(4);
-list.append(3);
+list.append(12);
+list.append(31);
+list.append(13);
+list.append(14);
+list.append(13);
 
 list.prepend(-1);
 list.prepend(-2);
@@ -229,6 +264,7 @@ console.log(list.search(3));
 // list.removeMiddleElement()
 list.reverse()
 list.printList();
+list.findLastFive()
 
 
 
