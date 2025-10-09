@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx';
 
 import {Provider} from 'react-redux'
-import { store } from './Components/Redux/Store/TimerStore.jsx';
+import store from './Components/Redux/Store/eventStore.jsx';
 
 
 

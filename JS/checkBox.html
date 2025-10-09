@@ -6,17 +6,131 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="checkbox" id="checked" >
-    <button onclick="toggleCheckBox()">Button</button>
+  
+   <h1>this.keyword</h1>
 
 </body>
 
 <script>
-  function toggleCheckBox(){
-      const checkedBox=document.getElementById('checked');
-        checkedBox.checked=!checkedBox.checked
+  // function toggleCheckBox(){
+  //     const checkedBox=document.getElementById('checked');
+  //       checkedBox.checked=!checkedBox.checked
 
+  // }
+
+  // "use strict"
+
+
+  //1
+
+  console.log('Console.log',this)// window object both strict mode
+
+
+
+  //2
+
+  // const set =()=>{
+  //   console.log('Inside the Arrow',this)
+  // }
+
+  // set()  //With "use strict" it window return or without "use strict" its same window return
+
+
+  //3
+
+  this.a=10
+
+  function Regular(){
+    this.a=20
+    console.log('Regular',this.a) 
+    const odi=()=>{
+      console.log('odi.....',this.a)
+    }
+    odi()
   }
+
+Regular() //without "use strict" mode window return or with "use strict" mode it will return undefined
+
+
+
+//4
+
+// const student={
+//   name:'Akhildas',
+//   printName:function(){
+//     console.log('student object function method',this)
+//   }
+// }
+// student.printName() 
+// 
+
+//With use strict and without mode return student object lexical content return object 
+
+
+//5
+// const students={
+//   name:'ArunKrishna',
+//   printName:()=>{
+//     console.log('students Object arrow function method',this)
+//   }
+// }
+// students.printName()
+// 
+
+// both case window object
+
+
+
+//6
+// function ObjFunction(){
+//   const person={
+//     name:'Peter',
+//     printName:function(){
+//       console.log(' Function Object',this) //person object
+//     },
+//   }
+//   person.printName()
+// }
+
+
+
+//7
+
+// ObjFunction()
+// function ArrowObjFunction(){
+//   const person={
+//     name:'Gwen',
+//     printName:()=>{
+//       console.log('Arrow Object Function ',this) //window
+//     },
+//   }
+//   person.printName()
+// }
+
+// ArrowObjFunction()
+
+
+
+
+// const user={
+//   name:'Joel',
+//   printName:function(){
+//     console.log(this.name)
+//   }
+// }
+
+
+// user.printName();
+
+
+
+// const admin={
+//   name:"Akhil"
+// }
+
+
+// user.printName.call(admin)
+
 </script>
 
 </html>

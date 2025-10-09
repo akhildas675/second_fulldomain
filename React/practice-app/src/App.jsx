@@ -1,16 +1,18 @@
 
-import ButtonToggle from "./Components/useContext/ButtonToggle";
-import ContextTheme from "./Components/useContext/ContextTheme";
-import DisplayTheme from "./Components/useContext/DisplayTheme";
+import EventChangeCount from "./Components/Redux/ReduxComponent/EventChangeCount";
+import EventCount from "./Main/EventCount";
+
+
 
 const App = () => {
   return (
   
-      <ContextTheme>
-        <ButtonToggle/>
-        <DisplayTheme/>
-      </ContextTheme>
    
+   <div>
+   
+    <EventChangeCount/>
+   </div>
+  
   );
 }
 
