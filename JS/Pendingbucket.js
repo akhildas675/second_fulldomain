@@ -12,15 +12,15 @@ Pending Bucket Practicals Questions
 8.Concatenating arrays, use spread operator(task)
 9.Combined ternary operator
 10.Remove duplicates from an array using reduce 
-
-//--
-
 11.Combine two objects 
 12.Delete property from an object
 13.remove multiples of 3 from array
 14.how to check if an object is empty
-15.find key corresponds to highest value in an object
+15.find key corresponds to highest value in an object 
 16.capitalize every words in a sentence
+
+//--
+
 17.remove duplicate even numbers from array,
 18.how to remove an array element without in-built methods,
 19.how to remove a character from string?
@@ -79,7 +79,7 @@ Pending Bucket Practicals Questions
 // Array: [10, 20, 30, 40, 50]
 // n = 2
 
-const arr = [10, 20, 30, 40, 50];
+// const arr = [10, 20, 30, 40, 50];
 
 // let n = 2;
 
@@ -312,8 +312,8 @@ const arr = [10, 20, 30, 40, 50];
 
 //11.Combine two objects 
 
-const obj1 = { a: 1, b: 2 };
-const obj2 = { b: 3, c: 4 };
+// const obj1 = { a: 1, b: 2 };
+// const obj2 = { b: 3, c: 4 };
 
 // function combineObjects(obj1, obj2) {
 
@@ -326,13 +326,143 @@ const obj2 = { b: 3, c: 4 };
 
 
 
-function combineObjects(obj1, obj2) { 
+// function combineObjects(obj1, obj2) { 
     
-    const combined=Object.assign({},obj1,obj2)
-    return combined
-}
+//     const combined=Object.assign({},obj1,obj2)
+//     return combined
+// }
 
 
 
 
-console.log('Object.assign..',combineObjects(obj1, obj2))
+// console.log('Object.assign..',combineObjects(obj1, obj2))
+
+
+
+//--------------------------------------------------------------------
+
+
+// 12.Delete property from an object 
+
+// function deleteObj(obj,key){
+
+//     delete obj[key]
+//     return obj
+
+// }
+// const person = { name: "Akhildas", age: 24, city: "Kochi" };
+
+// console.log(deleteObj(person,"age"))
+
+
+
+// function deleteObj(obj,key){
+
+//     let result={}
+
+//     for(let ele in obj){
+//         if(ele!==key){
+//             result[ele]=obj[ele]
+//         }
+//     }
+//     return result
+
+// }
+
+//  const person = { name: "Akhildas", age: 24, city: "Kochi" };
+
+// console.log(deleteObj(person,'age'))
+
+
+
+//-----------------------------------------------------------------
+
+
+// 13.remove multiples of 3 from array
+
+
+// function removeMul3(arr){
+//     let result=[]
+
+//     for(let i=0;i<arr.length;i++){
+//         if(arr[i]%3!==0){
+//             result.push(arr[i])
+//         }
+//     }
+//     return result
+
+// }
+
+
+// console.log(removeMul3([1,5,32,5,32,5,74,2,15,13,16,12,9]))
+
+
+
+//------------------------------------------------------------------
+
+
+
+
+// 14.how to check if an object is empty
+
+
+
+
+// function checkEmpty(obj){
+
+//     return Object.values(obj).length
+
+// }
+
+// const obj1 ={a:1,b:14,c:16}
+// const obj2 ={}
+
+// console.log(checkEmpty(obj1))
+// console.log(checkEmpty(obj2))
+
+
+
+
+//---------------------------------------------------------------
+
+// 15.find key corresponds to highest value in an object 
+
+
+// function findMaxKey(obj){
+//     let max = -Infinity;
+//     for(let key in obj){
+//         if(obj[key]>max){
+//             max=obj[key]
+//         }
+//     }
+//     return max
+// }
+// const scores = { Alice: 85, Bob: 92, Charlie: 88 };
+// console.log(findMaxKey(scores))
+
+
+
+//-----------------------------------------------------------------
+
+
+
+
+
+//16.capitalize every words in a sentence
+
+// function capitalizeWords(sentence) {
+
+//   let words = sentence.split(' ');
+
+//   for(let i=0;i<words.length;i++){
+//     words[i]=words[i].charAt(0).toUpperCase()+words[i].slice(1)
+//   }
+//   return words.join(' ')
+
+// }
+
+// const str = "welcome to soleway ecommerce project";
+// console.log(capitalizeWords(str))
+
+
+

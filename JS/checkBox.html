@@ -131,6 +131,13 @@ Regular() //without "use strict" mode window return or with "use strict" mode it
 
 // user.printName.call(admin)
 
+const obj = {
+ value: 54,
+ getValue: () => this.value
+};
+
+console.log('getValue',obj.getValue());
+
 </script>
 
 </html>
