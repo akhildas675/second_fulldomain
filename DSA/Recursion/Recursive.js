@@ -62,4 +62,23 @@
 
 
 
-//4 
+// Factorial
+
+
+//4.First 10 Factorial Numbers
+
+
+
+function fac(n){
+    if(n==0){
+        return 1
+    }
+
+    return n*fac(n-1)
+}
+
+
+
+for(let i=0;i<=10;i++){
+    console.log(fac(i))
+}
