@@ -18,11 +18,11 @@ Pending Bucket Practicals Questions
 14.how to check if an object is empty
 15.find key corresponds to highest value in an object 
 16.capitalize every words in a sentence
+17.remove duplicate even numbers from array,
+18.how to remove an array element without in-built methods,
 
 //--
 
-17.remove duplicate even numbers from array,
-18.how to remove an array element without in-built methods,
 19.how to remove a character from string?
 20.sum of even numbers using forEach
 21.remove even numbers from an array
@@ -466,3 +466,72 @@ Pending Bucket Practicals Questions
 
 
 
+//--------------------------------------------------------
+
+
+
+// 17.remove duplicate even numbers from array,
+
+
+
+// function removeDuplicateEvens(arr) { 
+//     let res={};
+
+//     for(let val of arr){
+//         if(!res[val]){
+//             res[val]=1
+//         }else{
+//             res[val]++
+//         }
+//     }
+
+//     let result=[]
+
+//     for(let key in res){
+//        if(res[key]==1){
+//         result.push(parseInt(key))
+//        }
+//     }
+//     return result
+// }
+
+
+// const numbers = [2, 3, 4, 2, 5, 6, 4, 7, 8, 8];
+// console.log(removeDuplicateEvens(numbers));
+
+
+//-----------------------------------------------------------
+
+//18.how to remove an array element without in-built methods,
+
+
+
+
+
+
+// const numbers = [2, 3, 4, 2, 5, 6, 4, 7, 8, 8]
+
+
+
+// function removeElement(arr, value) { 
+
+//     let index=0
+//     for(let i=0;i<arr.length;i++){
+
+//         if(arr[i]==value)
+//         index=i;
+//     }
+
+
+//     for(let i=index;i<arr.length;i++){
+//         arr[i]=arr[i+1];
+//     }
+
+//     arr.length=arr.length-1
+
+//     return arr
+
+
+// }
+
+// console.log(removeElement(numbers,6))
