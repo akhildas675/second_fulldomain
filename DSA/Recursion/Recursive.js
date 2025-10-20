@@ -5,6 +5,8 @@
 2.Print Reverse
 3.Sum of first 10
 4.First 10 Factorial Numbers
+5.print first 10 factorial without loop;
+6.Fibonacci sequence
 
 
 */
@@ -21,7 +23,6 @@
 // }
 
 // console.log(printNum(1))
-
 
 //---------------------------------------------------
 
@@ -74,32 +75,71 @@
 //   console.log(fac(i));
 // }
 
-
 //--------------------------------------------------------
 
 //5.print first 10 factorial without loop;
 
+// function fac(n) {
+//   if (n == 0) {
+//     return 1;
+//   }
+
+//   return n * fac(n - 1);
+// }
+
+// function printNumber(n, limit) {
+//   if (n == limit) {
+//     return;
+//   }
+
+//   console.log(fac(n));
+
+//   return printNumber(n + 1, limit);
+// }
+
+// printNumber(1, 10);
 
 
-function fac(n){
-    if(n==0){
-        return 1
+//---------------------------------------------
+
+
+// 6.Fibonacci sequence
+
+
+// function fib(n){
+
+//     if(n<=1){
+//         return 1
+//     }
+
+//     return fib(n-1)+fib(n-2)
+
+// }
+
+// for(let i=0;i<10;i++){
+//     console.log(fib(i))
+// }
+
+
+
+
+
+// Without  loop
+
+
+
+function fib(a,b){
+
+    if(a>=10){
+        return
     }
 
-    return n*fac(n-1)
+    console.log(a);
+
+    return fib(b,a+b)
+
 }
 
 
-function printNumber(n,limit){
+fib(0,1)
 
-    if(n==limit){
-        return;
-    }
-
-    console.log(fac(n))
-
-    return printNumber(n+1,limit)
-
-}
-
-printNumber(1,10)
