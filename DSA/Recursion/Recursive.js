@@ -7,6 +7,8 @@
 4.First 10 Factorial Numbers
 5.print first 10 factorial without loop;
 6.Fibonacci sequence
+7.Fibonacci sequence Without  loop
+8.Sum of numbers using recursion
 
 
 */
@@ -124,22 +126,41 @@
 
 
 
-// Without  loop
+//7.Fibonacci sequence Without  loop
 
 
 
-function fib(a,b){
+// function fib(a,b){
 
-    if(a>=10){
-        return
+//     if(a>=10){
+//         return
+//     }
+
+//     console.log(a);
+
+//     return fib(b,a+b)
+
+// }
+
+
+// fib(0,1)
+
+
+
+
+//--------------------------------------------------------------
+
+
+
+
+// 8.Sum of numbers using recursion
+
+
+function sumOfNum(n){
+    if(n==0){
+        return 0;
     }
-
-    console.log(a);
-
-    return fib(b,a+b)
-
+    return Math.floor(n%10)+Math.floor(sumOfNum(n/10))
 }
 
-
-fib(0,1)
-
+console.log(sumOfNum(12345))
