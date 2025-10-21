@@ -9,6 +9,7 @@
 6.Fibonacci sequence
 7.Fibonacci sequence Without  loop
 8.Sum of numbers using recursion
+9.Binary search using recursion
 
 
 */
@@ -101,12 +102,9 @@
 
 // printNumber(1, 10);
 
-
 //---------------------------------------------
 
-
 // 6.Fibonacci sequence
-
 
 // function fib(n){
 
@@ -122,13 +120,7 @@
 //     console.log(fib(i))
 // }
 
-
-
-
-
 //7.Fibonacci sequence Without  loop
-
-
 
 // function fib(a,b){
 
@@ -142,25 +134,48 @@
 
 // }
 
-
 // fib(0,1)
-
-
-
 
 //--------------------------------------------------------------
 
-
-
-
 // 8.Sum of numbers using recursion
 
+// function sumOfNum(n){
+//     if(n==0){
+//         return 0;
+//     }
+//     return Math.floor(n%10)+Math.floor(sumOfNum(n/10))
+// }
 
-function sumOfNum(n){
-    if(n==0){
-        return 0;
+// console.log(sumOfNum(12345))
+
+//------------------------------------------------------
+
+// 9.Binary search using recursion
+
+let arr=[41,31,6,2,7,8,11,34,53,12,11,17,8]
+
+
+
+function recursiveBinarySearch(arr,target,left=0,right=arr.length-1){
+
+    if(left>right){
+        return -1
     }
-    return Math.floor(n%10)+Math.floor(sumOfNum(n/10))
+
+    let mid = Math.floor((left+right)/2);
+
+    if(target==arr[mid]){
+        return mid
+    }
+
+    if(target<arr[mid]){
+        return recursiveBinarySearch(arr,target,left,mid-1)
+    }else{
+        return recursiveBinarySearch(arr,target,mid+1,right)
+    }
+
 }
 
-console.log(sumOfNum(12345))
+
+console.log(recursiveBinarySearch(arr.sort((a,b)=>a-b),12))
