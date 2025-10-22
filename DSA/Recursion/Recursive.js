@@ -153,29 +153,29 @@
 
 // 9.Binary search using recursion
 
-let arr=[41,31,6,2,7,8,11,34,53,12,11,17,8]
+// let arr=[41,31,6,2,7,8,11,34,53,12,11,17,8]
 
 
 
-function recursiveBinarySearch(arr,target,left=0,right=arr.length-1){
+// function recursiveBinarySearch(arr,target,left=0,right=arr.length-1){
 
-    if(left>right){
-        return -1
-    }
+//     if(left>right){
+//         return -1
+//     }
 
-    let mid = Math.floor((left+right)/2);
+//     let mid = Math.floor((left+right)/2);
 
-    if(target==arr[mid]){
-        return mid
-    }
+//     if(target==arr[mid]){
+//         return mid
+//     }
 
-    if(target<arr[mid]){
-        return recursiveBinarySearch(arr,target,left,mid-1)
-    }else{
-        return recursiveBinarySearch(arr,target,mid+1,right)
-    }
+//     if(target<arr[mid]){
+//         return recursiveBinarySearch(arr,target,left,mid-1)
+//     }else{
+//         return recursiveBinarySearch(arr,target,mid+1,right)
+//     }
 
-}
+// }
 
 
-console.log(recursiveBinarySearch(arr.sort((a,b)=>a-b),12))
+// console.log(recursiveBinarySearch(arr.sort((a,b)=>a-b),12))
