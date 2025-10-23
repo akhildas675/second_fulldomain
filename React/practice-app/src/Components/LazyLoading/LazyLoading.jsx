@@ -1,21 +1,21 @@
 import React, { Suspense, useState } from 'react';
-const Loading=React.lazy(()=>import('./LazyComponent'));
+
+const Loading = React.lazy(()=>import('./LazyComponent'))
 
 const LazyLoading = () => {
-    const [loading,setLoading]=useState(false)
 
-    const handleLazy=()=>{
-        setLoading(true)
+    const [lazy,setLazy]=useState(false);
+
+    const handleChange=()=>{
+        setLazy(true)
     }
     return (
         <div>
 
-            <h1>Parent component</h1>
+            <button onClick={handleChange}>Click</button>
 
-            <button onClick={handleLazy}>Click</button>
-
-            {loading && (
-                <Suspense fallback={<p>...isLoading</p>}>
+            {lazy &&  (
+                <Suspense  fallback={<p>...Loading</p>}>
                     <Loading/>
                 </Suspense>
             )}
