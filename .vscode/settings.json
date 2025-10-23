@@ -3,5 +3,20 @@
         "Hashtable",
         "heapify",
         "Thrissur"
-    ]
+    ],
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "code-runner-output",
+        "javascript"
+    ],
+    "spellright.parserByClass": {
+        "code-runner-output": {
+            "parser": "code"
+        }
+    }
 }
