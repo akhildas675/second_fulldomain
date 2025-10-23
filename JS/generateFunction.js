@@ -73,7 +73,6 @@ function* printEven(){
 
 let  gen=printEven()
 
-
 function limitPrint(max){
     let count=0
     let timer=setInterval(()=>{
@@ -84,9 +83,7 @@ function limitPrint(max){
         console.log(gen.next().value)
         count++
     },1000)
-
 }
-
 limitPrint(10)
 
 
