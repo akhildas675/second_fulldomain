@@ -2,26 +2,26 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 const UseCustomFetch = (url) => {
-   const [users,setUsers]=useState([])
-   const [error,setError]=useState(null)
+    const [users,setUsers]=useState([])
+    const [error,setError]=useState(null);
 
 
-   useEffect(()=>{
-    const fetchUsers= async ()=>{
+    useEffect(()=>{
         if(!url){
             return
         }
-        try {
-            const res = await axios.get(url)
-            setUsers(res.data)
-        } catch (error) {
-            setError(error)
+        const fetchUsers= async(url)=>{
+            try {
+                const response = await axios.get(url)
+                setUsers(response.data)
+            } catch (error) {
+                setError(error)
+            }
         }
-    }
-    fetchUsers()
-   })
+        fetchUsers()
+    })
 
-   return {users,error}
+    return {users,error}
 }
 
 export default UseCustomFetch;
