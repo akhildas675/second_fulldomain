@@ -18,7 +18,7 @@ function insertionSort(arr){
 console.log('insertion Sort',insertionSort(array));
 
 
-let name='akhildas'
+// let name='akhildas'
 
 
 function insertionSortName(string){
