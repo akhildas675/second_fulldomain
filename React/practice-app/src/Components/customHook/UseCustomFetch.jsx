@@ -10,16 +10,16 @@ const UseCustomFetch = (url) => {
         if(!url){
             return
         }
-        const fetchUsers= async(url)=>{
+        const fetchUsers= async()=>{
             try {
-                const response = await axios.get(url)
-                setUsers(response.data)
+                const res = await axios.get(url)
+                setUsers(res.data)
             } catch (error) {
                 setError(error)
             }
         }
         fetchUsers()
-    })
+    },[url])
 
     return {users,error}
 }

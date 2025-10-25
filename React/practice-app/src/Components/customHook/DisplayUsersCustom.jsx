@@ -3,38 +3,25 @@ import UseCustomFetch from './UseCustomFetch';
 import SendLinkToCustom from './SendLinkToCustom';
 
 const DisplayUsersCustom = () => {
-    const[newUrl,setUrl]=useState(null)
-    const{users,error}=UseCustomFetch(newUrl)
+    const [newUrl,setNewUrl]=useState('');
+    const{users,error}=UseCustomFetch(newUrl);
 
 
-    const handleChange=(newUrl)=>{
-        setUrl(newUrl)
+    const handleClick=(url)=>{
+        setNewUrl(url)
     }
-
-
-
-
-
-    if(error) return <p>Error:{error}</p>
     return (
         <div>
+            <SendLinkToCustom sendUrl={handleClick}/>
+
+            {error && <p>...Error</p>}
 
 
-            <SendLinkToCustom sendLink={handleChange}/>
-
-
-            <h1>Users</h1>
-
-            <ul>
-                {users.map((user)=>(
-                    <li key={user.id}>
-                        {user.name}
-                    </li>
+            <ul>    
+            {users.map((user)=>(
+                    <li key={user.id}>{user.name}</li>
                 ))}
-            </ul>
-
-
-
+                </ul>
             
         </div>
     );

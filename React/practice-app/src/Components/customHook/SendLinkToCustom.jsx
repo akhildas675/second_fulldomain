@@ -1,16 +1,13 @@
 import React from 'react';
 
-const SendLinkToCustom = ({sendLink}) => {
+const SendLinkToCustom = ({sendUrl}) => {
 
-    const handleClick=()=>{
-        sendLink('https://jsonplaceholder.typicode.com/users')
+    const handleLink=()=>{
+        sendUrl('https://jsonplaceholder.typicode.com/users')
     }
     return (
         <div>
-
-            <button onClick={handleClick}>Send Link</button>
-            
-            
+            <button onClick={handleLink}>Send</button>
         </div>
     );
 }
