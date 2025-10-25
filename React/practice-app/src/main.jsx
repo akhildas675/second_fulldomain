@@ -4,7 +4,8 @@ import './index.css'
 import App from './App.jsx';
 
 import {Provider} from 'react-redux'
-import store from './Components/Redux/Store/eventStore.jsx';
+import { store } from './Components/Redux/Store/FetchStore.jsx';
+
 
 
 
@@ -12,10 +13,12 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
    
 
-<Provider store={store} >
+<Provider store={store}>
+
 
 
     <App />
+
 
 </Provider>
 
