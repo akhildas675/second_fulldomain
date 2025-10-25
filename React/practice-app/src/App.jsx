@@ -1,25 +1,26 @@
+import Message from "./Components/Higher/Message";
+import MessageComponent from "./Components/Higher/MessageComponent";
+import NewParent from "./Components/props/NewParent";
 
-import CustomHooks from "./Components/CustomHook/CustomHooks";
-import DisplayUsersCustom from "./Components/CustomHook/DisplayUsersCustom";
-import LazyLoading from "./Components/LazyLoading/LazyLoading";
-import EventChangeCount from "./Components/Redux/ReduxComponent/EventChangeCount";
-import FetchUser from "./Components/Redux/ReduxComponent/FetchUser";
-import EventCount from "./Main/EventCount";
 
 
 
 const App = () => {
+
+  const MessageData = MessageComponent(Message)
   return (
   
    
    <div>
    
-   <LazyLoading/>
-   <DisplayUsersCustom/>
-   <FetchUser/>
+    <NewParent/>
+   
    </div>
   
   );
 }
 
 export default App;
+
+
+

@@ -22,11 +22,9 @@
 //   console.log(`Server is running on http://localhost:${PORT}`);
 // });
 
-
 // const express=require('express');
 
 // const app=express()
-
 
 // const port=process.env.port||4000;
 
@@ -44,12 +42,9 @@
 //   }, 2000);
 // })
 
-
 // app.listen(port,()=>{
 //   console.log(`Server running on http://localhost:${port}`)
 // })
-
-
 
 // const express = require('express');
 // const app = express();
@@ -71,8 +66,6 @@
 //   console.log('Server is running on http://localhost:3000');
 // });
 
-
-
 // const express = require('express');
 
 // const app=express();
@@ -88,7 +81,6 @@
 //   }
 // })
 
-
 // app.get('/get',(req,res)=>{
 //   res.send('Get request worked')
 //   console.log('Get request worked')
@@ -97,8 +89,6 @@
 // app.listen(port,()=>{
 //   console.log(`server running port http://localhost:${port}`)
 // })
-
-
 
 // const express = require('express');
 // const app = express();
@@ -119,8 +109,6 @@
 // app.listen(3000, () => {
 //   console.log('Server running on http://localhost:3000');
 // });
-
-
 
 // const express = require('express');
 // const app = express();
@@ -153,31 +141,25 @@
 //   console.log('Server running on http://localhost:3000');
 // });
 
-
-
 const express = require('express');
 
-const app = express()
-
-const port=process.env.PORT||3000
-
-function blockPostRequest(req,res,next){
-    if(req.method==='POST'){
-      return res.send('Post request blocking ')
-    }
-    next()
-}
-
-app.use(blockPostRequest)
+const app = express();
 
 
-app.get('/home',(req,res)=>{
-  res.send('Welcome Home')
+const port = process.env.PORT || 3000;
+
+
+app.get('/submit',(req,res)=>{
+  res.json({message:'submitted details'})
 })
-app.post('/login',(req,res)=>{
-  res.send('This request never send')
+
+.post((req,res)=>{
+  res.json({message:'posted data'})
+})
+.put((req,res)=>{
+  res.json({message:'posted data'})
 })
 
 app.listen(port,()=>{
-  console.log(`server running port http://localhost:${port}`)
+  console.log(`http://localhost:${port}`)
 })
