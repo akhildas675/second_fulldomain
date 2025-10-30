@@ -158,66 +158,66 @@
 
 
 
-let student=[
-    {
-        name:'Akhil',
-        class:'10B',
-        age:15,
-        scores:[
-            {React:20},
-            {NodeJS:50},
-            {MongoDB:20},
-            {DSA:20},
-            {Javascript:20},
+// let student=[
+//     {
+//         name:'Akhil',
+//         class:'10B',
+//         age:15,
+//         scores:[
+//             {React:20},
+//             {NodeJS:50},
+//             {MongoDB:20},
+//             {DSA:20},
+//             {Javascript:20},
             
-        ]
-    },
-    {
-        name:'Joel',
-        class:'10B',
-        age:15,
-        scores:[
-            {React:20},
-            {NodeJS:50},
-            {MongoDB:20},
-            {DSA:20},
-            {Javascript:20},
+//         ]
+//     },
+//     {
+//         name:'Joel',
+//         class:'10B',
+//         age:15,
+//         scores:[
+//             {React:20},
+//             {NodeJS:50},
+//             {MongoDB:20},
+//             {DSA:20},
+//             {Javascript:20},
             
-        ]
-    },
-    {
-        name:'Basil',
-        class:'10B',
-        age:15,
-        scores:[
-            {React:20},
-            {NodeJS:50},
-            {MongoDB:20},
-            {DSA:20},
-            {Javascript:20},
+//         ]
+//     },
+//     {
+//         name:'Basil',
+//         class:'10B',
+//         age:15,
+//         scores:[
+//             {React:20},
+//             {NodeJS:50},
+//             {MongoDB:20},
+//             {DSA:20},
+//             {Javascript:20},
             
-        ]
-    },
-]
+//         ]
+//     },
+// ]
 
-function findTheTotalMark(arr){
+// function findTheTotalMark(arr){
 
-    let result=[]
+//     let result=[]
 
-    for(let i=0;i<arr.length;i++){
-       let sub=arr[i].scores;
-       let total=0
+//     for(let i=0;i<arr.length;i++){
+//        let sub=arr[i].scores;
+//        let total=0
 
-       for(let j=0;j<sub.length;j++){
-        total+=Object.values(sub[j])[0];
-       }
+//        for(let j=0;j<sub.length;j++){
+//         total+=Object.values(sub[j])[0];
+//        }
 
-       result.push({name:arr[i].name,totalMark:total})
-    }
+//        result.push({name:arr[i].name,totalMark:total})
+//     }
 
-    return result
+//     return result
 
-}
+// }
 
 
-console.log(findTheTotalMark(student))
+// console.log(findTheTotalMark(student))
